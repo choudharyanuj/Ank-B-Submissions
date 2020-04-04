@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ageinput{
+            background-color: orangered;
+            color: white;
+            margin-left: 500px;
+            height: 50px;
+            width: 200px;
+        }
+        .h1{
+            margin-left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="age" id="ageinput">
+    <button onclick="showeligbility()">submit</button>
+    <h1 id="drivingrule1" class="h1">check here to driving eligblity</h1>
+    <script>
+        function showeligbility (){
+            var number = document.getElementById("ageinput").value
+            if(number.length== 0){
+                document.getElementById('drivingrule1').innerHTML=""
+                alert("not allowed")
+            }
+            else if(number>18){
+                document.getElementById("drivingrule1").innerHTML= "You can drive in India!"
+            }
+            else if(number<18){
+                document.getElementById("drivingrule1").innerHTML="You can't drive in India"
+
+            }
+            else if(number==18){
+                document.getElementById("drivingrule1").innerHTML="You are just old enough to drive"
+            }
+            else{
+                
+            }
+        }
+    </script> 
+</body>
+</html>

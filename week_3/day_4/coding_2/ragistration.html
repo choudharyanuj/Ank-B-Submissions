@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="coding2.css">
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Name</h1>
+            <input class="inputborder" id="input1"></input>
+            <p id="name"></p>
+            <h1>Email</h1>
+            <input type="Email" class="inputborder" id="input2"></input>
+            <p id="email"></p>
+            <h1>Mobile No</h1>
+            <input type="mobile no" class="inputborder" id="input3"></input>
+            <p id="mobile"></p>
+        </div>
+        <button onclick="registration()">Registration</button>
+        <div class="formbox">
+            <h1>Name</h1>
+            <p id="name1">na</p>
+            <h1>Mail id</h1>
+            <p id="email1">no</p>
+            <h1>mobile No</h1>
+            <p id="mobile1">hi</p>
+        </div>
+    </div>
+</body>
+<script>
+    function registration(){
+        var name = document.getElementById("input1").value
+        var email = document.getElementById("input2").value
+        var mobile = document.getElementById("input3").value
+        if(name.length<3 || name.length>10){
+            document.getElementById("name").innerHTML="plz fill valid name"
+        }else{
+            document.getElementById("name1").innerHTML=name
+        }
+        
+        if(mobile.length<10 || mobile.length>10){
+            document.getElementById("mobile").innerHTML="plz fill valid mobile no"
+        }
+        else{
+            document.getElementById("mobile1").innerHTML=mobile
+        }
+        document.getElementById("email1").innerHTML=email
+    }
+</script>
+</html>

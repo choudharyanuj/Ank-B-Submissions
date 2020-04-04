@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            margin-top: 20px;
+            margin-left: 400px;
+        }
+        .row1{
+            display: grid;
+            grid-template-columns: 5% 5% 5% 5%;
+            grid-template-rows: 70px 70px;
+            grid-gap: 5%;
+        }
+        .row2{
+            display: grid;
+            grid-template-columns: 5% 5% 5%;
+            grid-template-rows: 70px 70px;
+            grid-gap: 5%;
+        }
+        .row3{
+            display: grid;
+            grid-template-columns: 5% 5%;
+            grid-template-rows: 70px 70px;
+            grid-gap: 5%;
+        }
+        .row4{
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <div class="row1">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="row2">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="row3">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="row4">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

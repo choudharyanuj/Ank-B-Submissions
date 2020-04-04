@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .headingbackground{
+            background-color: royalblue;
+            height: 50px;
+        }
+        #headingtext1{
+            color: white;
+            margin-left: 200px;
+            margin-top: -45px;
+            
+        }
+        #headingtext2{
+            color: aqua;
+            margin-left: 270px;
+            margin-top: -58px;
+            
+        }
+        #headingtext3{
+            color: white;
+            margin-left: 430px;
+            margin-top: -58px;
+        }
+        #buttonarrengment{
+            display: flex;
+            flex-direction: row;
+        }
+        #button1{
+            height: 40px;
+            width: 70px;
+            background-color: green;
+            color: white;
+            margin-left: 200px;
+            margin-top: 80px;
+        }
+        #button2{
+            height: 40px;
+            width: 90px;
+            background-color: green;
+            color: white;
+            margin-left: 3px;
+            margin-top: 80px;
+        }
+        #button3{
+            height: 40px;
+            width: 70px;
+            background-color: green;
+            color: white;
+            margin-left: 3px;
+            margin-top: 80px;
+        }
+        #button4{
+            height: 40px;
+            width: 70px;
+            background-color: green;
+            color: white;
+            margin-left: 3px;
+            margin-top: 80px;
+        }
+        #button5{
+            height: 40px;
+            width: 70px;
+            background-color: green;
+            color: white;
+            margin-left: 3px;
+            margin-top: 80px;
+        }
+        #button6{
+            height: 40px;
+            width: 70px;
+            background-color: green;
+            color: white;
+            margin-left: 3px;
+            margin-top: 80px;
+        }
+        .squarebox1{
+            width: 600px;
+            height: 400px;
+            background-color: gray;
+            margin-left: 200px;
+            margin-top: 1px;
+        }
+        #optionbox1{
+            width: 250px;
+            height: 40px;
+            margin-left: 10px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: -20px;
+
+        }
+        #optionbox2{
+            width: 250px;
+            height: 40px;
+            margin-left: 35px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: -20px;
+
+        }
+        #fromheading{
+            margin-top: 3px;
+            margin-left: 10px;
+        }
+        #toheading{
+            margin-left: 300px;
+            margin-top: -45px;
+        }
+        #optionbox3{
+            width: 250px;
+            height: 250px;
+            margin-left: 10px;
+            background-color:white;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #optionbox3 button{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 25px;
+            border:0px;
+        }
+        #optionbox4{
+            width: 250px;
+            height: 250px;
+            margin-left: 305px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: -250px;
+        }
+        #optionbox4 button{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 25px;
+            border:0px;
+        }
+        #optionbox5{
+            width: 250px;
+            height: 250px;
+            margin-left: 10px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        #optionbox5 button{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 25px;
+            border:0px;
+        }
+        #optionbox6{
+            width: 250px;
+            height: 250px;
+            margin-left: 305px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: -250px;
+        }
+        #optionbox6 button{
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            height: 25px;
+            border:0px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="headingbackground"></div>
+        <div>
+            <h1 id="headingtext1">Unit</h1>
+            <h1 id="headingtext2">Converters</h1>
+            <h1 id="headingtext3">.com</h1>
+        </div>
+        <div id="buttonarrengment">
+            <button onclick="lenghth()" id="button1">Length</button>
+            <button onclick="temprature()" id="button2">Temprature</button>
+            <button onclick="area()" id="button3">Area</button>
+            <button onclick="volume()" id="button4">Volume</button>
+            <button onclick="weight()" id="button5">Weight</button>
+            <button onclick="time()" id="button6">Time</button>
+        </div>
+        <div>
+            <div class="squarebox1">
+            <h2 id="fromheading">From:</h2>
+            <h2 id="toheading">To:</h2>
+            <input name="text" id="optionbox1"></input>
+            <input name="text" id="optionbox2"></input>
+            <div id="optionbox3">
+                <button id="m1" onclick="meter1()">Meter</button>
+                <button id="k1" onclick="kilometer1()">Kilometer</button>
+                <button id="c1" onclick="centimeter1()">Centimeter</button>
+                <button id="mili1" onclick="milimeter1()">Milimeter</button>
+                <button id="mic1" onclick="micrometer1()">Micrometer</button>
+                <button id="nano1" onclick="nanometer1()">Nanometer</button>
+                <button id="mile1" onclick="mile1()">Mile</button>
+                <button id="y1" onclick="yard1()">Yard</button>
+                <button id="f1" onclick="foot1()">Foot</button>
+                <button id="in1" onclick="inch1()">Inch</button>
+                <button id="light1" onclick="lightyear1()">Light Year</button>
+            </div>
+            <div id="optionbox4">
+                <button id="m2" onclick="meter2()">Meter</button>
+                <button id="k2" onclick="kilometer2()">Kilometer</button>
+                <button id="c2" onclick="centimeter2()">Centimeter</button>
+                <button id="mili2" onclick="milimeter2()">Milimeter</button>
+                <button id="mic2" onclick="micrometer2()">Micrometer</button>
+                <button id="nano2" onclick="nanometer2()">Nanometer</button>
+                <button id="mile2" onclick="mile2()">Mile</button>
+                <button id="y2" onclick="yard2()">Yard</button>
+                <button id="f2" onclick="foot2()">Foot</button>
+                <button id="in2" onclick="inch2()">Inch</button>
+                <button id="light2" onclick="lightyear2()">Light Year</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function temprature(  ){
+           document.getElementById("m1").innerHTML="Celcius"
+           document.getElementById("k1").innerHTML="kilometer"
+           document.getElementById("c1").innerHTML="fahrenhite"
+           document.getElementById("mili1").innerHTML=
+           document.getElementById("mic1").innerHTML=""
+           document.getElementById("nano1").innerHTML=""
+           document.getElementById("mile1").innerHTML=""
+           document.getElementById("f1").innerHTML=""
+           document.getElementById("in1").innerHTML=""
+           document.getElementById("y1").innerHTML=""
+           document.getElementById("light1").innerHTML=""
+           document.getElementById("m2").innerHTML="celcius"
+           document.getElementById("k2").innerHTML="kilometer"
+           document.getElementById("c2").innerHTML="Fahrenhite"
+           document.getElementById("mili2").innerHTML=""
+           document.getElementById("mic2").innerHTML=""
+           document.getElementById("nano2").innerHTML=""
+           document.getElementById("mile2").innerHTML=""
+           document.getElementById("f2").innerHTML=""
+           document.getElementById("in2").innerHTML=""
+           document.getElementById("y2").innerHTML=""
+           document.getElementById("light2").innerHTML=""
+        }
+        function area(){
+            document.getElementById("m1").innerHTML="Square Meter"
+           document.getElementById("k1").innerHTML="square kilometer"
+           document.getElementById("c1").innerHTML="square centimeter"
+           document.getElementById("mili1").innerHTML="square milimeter"
+           document.getElementById("mic1").innerHTML="sqaure micrometer"
+           document.getElementById("nano1").innerHTML="Hectere"
+           document.getElementById("mile1").innerHTML="square mile"
+           document.getElementById("f1").innerHTML="square yard"
+           document.getElementById("in1").innerHTML="square foot"
+           document.getElementById("y1").innerHTML="square inch"
+           document.getElementById("light1").innerHTML="Acer"
+           document.getElementById("m2").innerHTML="square meter"
+           document.getElementById("k2").innerHTML="square kilometer"
+           document.getElementById("c2").innerHTML="square centimeter"
+           document.getElementById("mili2").innerHTML="square milimeter"
+           document.getElementById("mic2").innerHTML="square micrometer"
+           document.getElementById("nano2").innerHTML="Hectere"
+           document.getElementById("mile2").innerHTML="square mile"
+           document.getElementById("f2").innerHTML="square yard"
+           document.getElementById("in2").innerHTML="square foot"
+           document.getElementById("y2").innerHTML="square inch"
+           document.getElementById("light2").innerHTML="Acer"
+        }
+        function meter1(){
+            document.getElementById("optionbox2").innerHTML= document.getElementById("optionbox1").value
+        }
+        function meter2
+        
+    </script>
+</body>
+</html>

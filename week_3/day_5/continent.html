@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #continent{
+            background-color: orangered;
+            color: white;
+            margin-left: 500px;
+            height: 50px;
+            width: 200px;
+        }
+        .h1{
+            margin-left: 400px;
+        }
+        #bg1{
+            background-color: black;
+        }
+        
+    </style>
+</head>
+<body>
+    <select id="continent">
+        <option value ="">Select</option>
+        <option value="India">India</option>
+		<option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+	</select>
+    <button onclick="showeligbility()">submit</button>
+    <script>
+        function showeligbility (){
+            var showalert = document.getElementById("continent").value
+            switch(showalert){
+                case "India":{
+                    alert("india is in Asia continent ")
+                    break;
+                }
+                case "United States of America":{
+                    alert("USA is in North America")
+                    break;
+                }
+                case "China":{
+                    alert("China is in Asia continent")
+                    break;
+                }
+                case "Nepal":{
+                    alert("Nepal is in Asia continent")
+                    break;
+                }
+                case "Australia":{
+                    alert("Australia is in Oceania continent")
+                    break;
+                }
+                case "France":{
+                    alert("France is in Europe continet")
+                    break;
+                }
+                case "Germany":{
+                    alert("Germany is in Europe continet")
+                    break;
+                }
+                case "South Africa":{
+                    alert("South Africa is in Africa continet")
+                    break;
+                }
+                case "Nigeria":{
+                    alert("Nigeria is in Africa continent")
+                    break;
+                }
+                case "Mexico":{
+                    alert("Mexio is in Noth America continent")
+                    break;
+                }
+                case "Argentina":{
+                    alert("Argentina is in South America continet")
+                    break;
+                }
+                case "Brazil":{
+                    alert("Brazil is in South America continet")
+                    break;
+                }
+                case "Canada":{
+                    alert("canda is in North America continent")
+                    break;
+                }
+                case "Singapore":{
+                    alert("Singapore is in Asia continent")
+                    break;
+                }
+                case "Sweden":{
+                    alert("Sweden is in Europe continent")
+                    break;
+                }
+                default:{
+                    alert("you are not selceted valid country")
+                }
+            }
+        }
+    </script> 
+</body>
+</html>

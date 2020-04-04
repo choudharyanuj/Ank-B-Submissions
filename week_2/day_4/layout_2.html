@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boxtype1{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            align-items: center;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .boxtype2{
+            background-color: green;
+            height: 100px;
+            width: 300px;
+            align-items: center;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+        .row1{
+            display: flex;
+            align-items: center;
+            /* margin-left: 50px; */
+        }
+        @media (max-width: 800px){
+            .boxtype1,.boxtype2{
+                background-color: tomato;
+                }
+        }
+    </style>
+</head>
+<body>
+    <div style="align-items: center;">
+    <div class="row1">
+        <div class="boxtype1"></div>
+        <div class="boxtype2"></div>
+        <div class="boxtype1"></div>
+    </div>
+    <div class="row1">
+        <div class="boxtype2"></div>
+        <div class="boxtype1"></div>
+        <div class="boxtype1"></div>
+    </div>
+    <div class="row1">
+        <div class="boxtype1"></div>
+        <div class="boxtype1"></div>
+        <div class="boxtype2"></div>
+    </div>
+    </div>
+</body>
+</html>

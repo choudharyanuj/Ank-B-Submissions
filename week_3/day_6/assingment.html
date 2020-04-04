@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        #squarebox1{
+            width: 400px;
+            height: 400px;
+            background-color: brown;
+            margin-top: 200px;
+        }
+        #squarebox2{
+            width: 400px;
+            height: 400px;
+            background-color: brown;
+            margin-top: -400px;
+            margin-left: 500px;
+        }
+        .input11{
+            margin-top: 50px;
+            margin-left: 80px;
+            width: 200px;
+            height: 50px;
+        }
+        .select1{
+            margin-top: 20px;
+            margin-left: 120px;
+            width: 100px;
+            height: 30px;
+        }
+        .select2{
+            margin-top: 20px;
+            margin-left: 120px;
+            width: 100px;
+            height: 30px;
+        }
+        #h21{
+            color: white;
+            margin-left: 50px;
+            margin-top: -30px;
+        }
+        #h22{
+            color: white;
+            margin-left: 50px;
+            margin-top: -30px;
+        }
+        #h23{
+            color: white;
+            margin-left: 30px;
+            margin-top: 30px;
+        }
+        .result{
+            color: white;
+            margin-left: 150px;
+            margin-top: -40px;
+        }
+        #convert{
+            color: red;
+            margin-left: 120px;
+            margin-top: 30px;
+            width: 100px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <Div>
+        <div id="squarebox1">
+            <input type="text" id="input1" class="input11"></input>
+            <select class="select1" id="from">
+                <option value="">Select</option>
+                <option value="meter">meter</option>
+                <option value="centimeter">centimeter</option>
+                <option value="milimeter">milimeter</option>
+            </select>
+            <h2 id="h21">from:</h2>
+            <select class="select2" id="to">
+                <option value="">Select</option>
+                <option value="meter">meter</option>
+                <option value="centimeter">centimeter</option>
+                <option value="milimeter">milimeter</option>
+            </select>
+            <h2 id="h21">TO:</h2>
+            <button onclick="convert()" id="convert">convert</button>
+            <h2 id="h23">result:</h2>
+            <p class="result" id="result"></p>   
+        </div>
+    </Div>
+    <div>
+        <div id="squarebox2">
+            <input type="text" id="input11" class="input11"></input>
+            <select class="select1" id="from1">
+                <option value="">Select</option>
+                <option value="celsius">celsius</option>
+                <option value="kelvin">kelvin</option>
+                <option value="fahrenhite">fahrenhite</option>
+            </select>
+            <h2 id="h21">from:</h2>
+            <select class="select2" id="to1">
+                <option value="select">select</option>
+                <option value="celsius">celsius</option>
+                <option value="kelvin">kelvin</option>
+                <option value="fahrenhite">fahrenhite</option>
+            </select>
+            <h2 id="h21">TO:</h2>
+            <button onclick="convert1()" id="convert">convert</button>
+            <h2 id="h23">result:</h2>
+            <p class="result" id="result1"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function convert(){
+        var input = document.getElementById("input1").value
+        var fromoption = document.getElementById("from").value
+        var tooption = document.getElementById("to").value
+        if(fromoption=="meter" && tooption=="meter"){
+            document.getElementById("result").innerHTML=input
+        }
+        else if(fromoption=="meter" && tooption=="centimeter"){
+            result=input*100
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="meter" && tooption=="milimeter"){
+            result=input*1000
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="centimeter" && tooption=="meter"){
+            result=input/100
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="centimeter" && tooption=="centimeter"){
+            result=input
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="centimeter" && tooption=="milimeter"){
+            result=input*100
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="milimeter" && tooption=="meter"){
+            result=input/1000
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="milimeter" && tooption=="centimeter"){
+            result=input/100
+            document.getElementById("result").innerHTML=result
+        }
+        else if(fromoption=="milimeter" && tooption=="milimeter"){
+            result=input
+            document.getElementById("result").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function convert1(){
+        var a = document.getElementById("input11").value
+        var b = document.getElementById("from1").value
+        var c = document.getElementById("to1").value
+        if(b == "celsius" && c == "celsius"){
+            document.getElementById("result1").innerHTML=a
+        }
+        else{
+            console.log("No")
+        }
+    }
+</script>
+</html>

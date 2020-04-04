@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            margin-left: 100%;
+            margin-top: 250px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 5% 5% 5% 5% 5%;
+            grid-template-rows: 80px;
+            grid-gap:55px;
+        }
+        @media (max-width: 800px){
+            .box{
+                background-color: tomato;
+                align-items: center;
+            }
+            .row{
+                grid-template-columns: 50%;
+            align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>  
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div> 
+    </div>
+</body>
+</html>
