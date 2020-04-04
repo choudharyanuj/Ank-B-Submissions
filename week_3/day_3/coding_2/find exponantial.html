@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="nuber" id="nub1"></input>
+    <input type="nuber" id="nub2"></input>
+    <button onclick="convert()" onclick="expo()" id="result2">click for multiplication</button>
+    <p id="result1"></p>
+
+</body>
+<script>
+    function convert(){
+    var input1 = document.getElementById("nub1").value
+    var input2 = document.getElementById("nub2").value
+    var output1 = input1*input2
+    document.getElementById("result1").innerHTML=output1
+    document.getElementById("result2").innerHTML="click here for exponential"
+    }
+    function expo(){
+        var input1 = document.getElementById("nub1").value
+        var input2 = document.getElementById("nub2").value
+        var output3 = 1
+        for(var i=0;i<input2;i++){
+            output3*=input1
+        }
+        document.getElementById("result1").innerHTML=output3
+    }
+</script>
+</html>

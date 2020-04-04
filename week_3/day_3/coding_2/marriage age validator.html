@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input1"></input>
+    <select name="gender" id="1st">
+        <option value="select" id="select">select</option>
+        <option value="male" id="male">male</option>
+        <option value="female" id="female">female</option>
+    </select>
+    <button onclick="validation()" id="check">check your email</button>
+</body>
+<script>
+    function validation(){
+        var input = document.getElementById("input1").value
+        var gender = document.getElementById("1st").value
+        if(gender=="select" && input>=0){
+            alert("plz select your gender 1st")
+        }
+        else if(gender=="male" && input>=21){
+            alert("you are eligible for marriage")
+        }
+        else if(gender=="female" && input>=18){
+            alert("you are eligible for marriage")
+        }
+        else{
+            alert("you are not elligible")
+        }
+    }
+</script>
+</html>
