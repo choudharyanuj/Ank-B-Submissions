@@ -12,13 +12,24 @@
 <script>
     function validation(){
         var input = document.getElementById("input1").value
-        var check = a
-        if (input==check){
-            alert("your email id is valid")
+        var count = 0
+        for(var p=0;p<input.length;p++){  
+            if(input[p]=="@"){
+                count= count+1
+            } 
+        }
+        if(count==1){
+            if (input[0]!=="@" && input[input.length-1]=="m" && input[input.length-2]=="o" && input[input.length-3]=="c" && input[input.length-4]=="." ){ 
+                alert("your email is valid")
+            }    
+            else{
+                alert("your email id is not valid")
+            }
         }
         else{
-            alert("your email id is not valid")
-        }
+            alert("your email is not valid")
+            }
+           
     }
 </script>
 </html>
