@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="coding2.css">
+</head>
+<body>
+    <div>
+        <div class="maincontainer">
+            <div class="inputbox">
+                <h3>min:</h3>
+                <h3 id="mini">0</h3>
+                <h3>max:</h3>
+                <p id="max">0</p>
+            </div>
+            <div class="displaybox">
+                <p id="display"></p>
+            </div>
+            <div class="buttongrid">
+                <button onclick="one()" id="1">1</button>
+                <button onclick="two()" id="2">2</button>
+                <button onclick="three()" id="3">3</button>
+                <button onclick="four()" id="4">4</button>
+                <button onclick="five()" id="5">5</button>
+                <button onclick="six()" id="6">6</button>
+                <button onclick="seven()" id="7">7</button>
+                <button onclick="eight()" id="8">8</button>
+                <button onclick="nine()" id="9">9</button>
+                <button>*</button>
+                <button onclick="zero()" id="0">0</button>
+                <button>#</button>
+            </div>
+            <button onclick="button()" class="enterbutton">Enter</button> 
+        </div>
+    </div>
+</body>
+<script>
+    var display = "";
+    var result=""
+    var go = "0"
+function one(){
+    var one = document.getElementById("1").innerHTML="1"
+    display = one
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function two(){
+    var two = document.getElementById("2").innerHTML="2"
+    display=two
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function three(){
+    var three = document.getElementById("3").innerHTML="3"
+    display=three
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function four(){
+    var four = document.getElementById("4").innerHTML="4"
+    display=four
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function five(){
+    var five = document.getElementById("5").innerHTML="5"
+    display=five
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function six(){
+    var six = document.getElementById("6").innerHTML="6"
+    display=six
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function seven(){
+    var seven = document.getElementById("7").innerHTML="7"
+    display=seven
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function eight(){
+    var eight = document.getElementById("8").innerHTML="8"
+    display = eight
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function nine(){
+    var nine = document.getElementById("9").innerHTML="9"
+    display=nine
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function zero(){
+    var zero = document.getElementById("0").innerHTML="0"
+    display=zero
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function button(){
+    var d = document.getElementById("display").textContent
+    var e = document.getElementById("max").textContent
+    if (Number(e)<Number(d)) {
+        document.getElementById("max").innerHTML = d
+        result = "";
+        document.getElementById("mini").innerHTML = e
+        result = "";
+	}
+	else{
+        document.getElementById("mini").innerHTML = d;
+        result = "";
+    }
+    
+}
+
+
+
+</script>
+</html>

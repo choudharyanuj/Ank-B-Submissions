@@ -13,7 +13,7 @@
             <input class="inputborder" id="input1"></input>
             <p id="name"></p>
             <h1>Email</h1>
-            <input type="Email" class="inputborder" id="input2"></input>
+            <input class="inputborder" id="input2"></input>
             <p id="email"></p>
             <h1>Mobile No</h1>
             <input type="mobile no" class="inputborder" id="input3"></input>
@@ -34,7 +34,9 @@
     function registration(){
         var name = document.getElementById("input1").value
         var email = document.getElementById("input2").value
+        console.log(email)
         var mobile = document.getElementById("input3").value
+        var count = 0
         if(name.length<3 || name.length>10){
             document.getElementById("name").innerHTML="plz fill valid name"
         }else{
@@ -47,7 +49,23 @@
         else{
             document.getElementById("mobile1").innerHTML=mobile
         }
-        document.getElementById("email1").innerHTML=email
+        for(var p=0;p<email.length;p++){  
+            if(email[p]=="@"){
+                count= count+1
+            } 
+        }
+        if(count==1){
+            if (email[0]!=="@" && email[email.length-1]=="m" && email[email.length-2]=="o" && email[email.length-3]=="c" && email[email.length-4]=="." ){ 
+                document.getElementById("email1").innerHTML=email
+            }    
+            else{
+                document.getElementById("email").innerHTML="plz fill valid Email"
+            }
+        }
+        else{
+            document.getElementById("email").innerHTML="plz fill valid Email"
+            }
+        
     }
 </script>
 </html>
