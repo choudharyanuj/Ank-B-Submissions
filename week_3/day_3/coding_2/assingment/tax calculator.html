@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="taxcalculator.css">
+</head>
+<body>
+    <div>
+        <div class="maincontainer">
+            <div class="displaybox">
+                <div class="displayflex">
+                    <p id="display1">plz enter ur anual income:</p>
+                    <p id="display2">0</p>
+                </div>
+                <div class="displayflex">
+                    <p id="display3">plz enter ur anual saving:</p>
+                    <p id="display4">0</p>
+                </div>
+                <div class="displayflex">
+                    <p id="display5">Total income:</p>
+                    <p id="display6">0</p>
+                </div>
+                <div class="displayflex">
+                    <p id="display7">Total taxes:</p>
+                    <p id="display8">0</p>
+                </div>
+                <div class="displayflex">
+                    <p id="display9">input</p>
+                    <p id="display">0</p>
+                </div>
+            </div>
+            <div class="buttongrid">
+                <button onclick="one()" id="1">1</button>
+                <button onclick="two()" id="2">2</button>
+                <button onclick="three()" id="3">3</button>
+                <button onclick="four()" id="4">4</button>
+                <button onclick="five()" id="5">5</button>
+                <button onclick="six()" id="6">6</button>
+                <button onclick="seven()" id="7">7</button>
+                <button onclick="eight()" id="8">8</button>
+                <button onclick="nine()" id="9">9</button>              
+                <button onclick="zero()" id="0">0</button>
+            </div>
+            <div class="enterbutton">
+                <button onclick="anual()" id="tax">Enter ur anual income</button>
+                <button onclick="saving()" id="tax">Enter ur saving income</button>
+                <button onclick="total()" id="tax">Enter ur total income</button>
+                <button onclick="tax()" id="tax">find your tax</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+  var display = "";
+    var result="";
+    // var go = "0"
+function one(){
+    var one = document.getElementById("1").innerHTML="1"
+    display = one
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function two(){
+    var two = document.getElementById("2").innerHTML="2"
+    display=two
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function three(){
+    var three = document.getElementById("3").innerHTML="3"
+    display=three
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function four(){
+    var four = document.getElementById("4").innerHTML="4"
+    display=four
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function five(){
+    var five = document.getElementById("5").innerHTML="5"
+    display=five
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function six(){
+    var six = document.getElementById("6").innerHTML="6"
+    display=six
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function seven(){
+    var seven = document.getElementById("7").innerHTML="7"
+    display=seven
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function eight(){
+    var eight = document.getElementById("8").innerHTML="8"
+    display = eight
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function nine(){
+    var nine = document.getElementById("9").innerHTML="9"
+    display=nine
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function zero(){
+    var zero = document.getElementById("0").innerHTML="0"
+    display=zero
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function anual(){
+    income= document.getElementById("display").textContent
+    document.getElementById("display2").innerHTML=income
+    document.getElementById("tax").innerHTML="Enter your anual anual income"
+    result="";
+}
+function saving(){
+    income1= document.getElementById("display").textContent
+    document.getElementById("display4").innerHTML=income1
+    document.getElementById("tax").innerHTML="Enter your anual saving amount"
+    result="";
+}
+function total(){
+    sum= Number(income)+Number(income1)
+    document.getElementById("display6").innerHTML=sum
+    document.getElementById("tax").innerHTML="Enter your total  amount"
+}
+function tax(){
+    if(Number(sum)>=Number(1000000)){
+    var x=0;
+    x=Number(sum)-Number(50000)
+    while(x>=1000000){
+        if(x>=1000000){
+        var x1 =x*0.3
+        x = x - x1
+        console.log(x)
+        }
+        else{
+        }
+    }
+    while(x<1000000 && x>=500000){
+        if(x<1000000){
+            var x2 = x*0.2
+            x=x-x2
+        }
+        else{
+
+        }
+   
+    }
+    while(x<500000 && x>250000){
+        if(x<500000){
+            var x3 = x*0.1
+            x=x-x3
+        }
+        else{
+
+        }
+   
+    }
+    var y =x1+x2+x3
+    document.getElementById("display8").innerHTML=y
+    }
+    else if(Number(sum)<Number(1000000) && Number(sum)>=Number(500000)){
+    var x=0;
+    x=Number(sum)-Number(300000)
+    while(x<1000000 && x>=500000){
+        if(x<1000000){
+            var x2 = x*0.2
+            x=x-x2
+        }
+        else{
+
+        }
+    }
+    while(x<500000 && x>=250000){
+        if(x<500000){
+            var x3 = x*0.1
+            x=x-x3
+        }
+        else{
+
+        }
+   
+    }
+    var y =x2+x3
+    document.getElementById("display8").innerHTML=y
+    }
+    else if(Number(sum)<=Number(500000) && Number(sum)>=Number(250000)){
+    var x=0;
+    x=Number(sum)-Number(250000)
+    while(x<=500000 && x>=250000){
+        if(x<500000){
+            var x3 = x*0.1
+            x=x-x3
+        }
+        else{
+
+        }
+   
+    }
+    var y =x2+x3
+    document.getElementById("display8").innerHTML=y
+    }
+    else if(Number(sum)<250000){
+        document.getElementById("display8").innerHTML="your are not eligible for tax" 
+    }
+    
+    
+    
+}                                                                                                                                                                                                                                                                       
+</script>
+</html>

@@ -1,0 +1,40 @@
+.maincontainer{
+    background-color: teal;
+    width: 400px;
+    height: 470px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 350px;
+    padding-top: 10px;
+}
+.displaybox{
+    width: 380px;
+    height: 270px;
+    background-color: gray;
+    margin-left: 8px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+.displayflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.buttongrid{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10%;
+    grid-gap: 10%;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.enterbutton{
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;
+    width: 100px;
+    height: 50px;
+    margin-left: 12px;
+    margin-top: 50px;
+    justify-content: space-
+}
