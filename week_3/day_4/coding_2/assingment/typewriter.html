@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="typwriter.css">
+</head>
+<body>
+    <div>
+        <div>
+            <p class="inputbox" id="inputbox"></p>
+        </div>
+        <div class="buttonrow1">
+            <button class="buttonsize" onclick="one()" id="special-charecter1" value="!">!
+                <p id="one">1</p>
+            </button>
+            <button class="buttonsize"onclick="two()" id="special-charecter2" value="@">@
+                <p id="two">2</p>
+            </button>
+            <button class="buttonsize"onclick="three()" id="special-charecter3" value="#">#
+                <p id="three">3</p>
+            </button>
+            <button class="buttonsize"onclick="four()" id="special-charecter4" value="$">$
+                <p id="four">4</p>
+            </button>
+            <button class="buttonsize"onclick="five()" id="special-charecter5" value="%">%
+                <p id="five">5</p>
+            </button>
+            <button class="buttonsize"onclick="six()" id="special-charecter6" value="^">^
+                <p id="six">6</p>
+            </button>
+            <button class="buttonsize" onclick="seven()" id="special-charecter7" value="&">&
+                <p id="seven">7</p>
+            </button>
+            <button class="buttonsize" onclick="eight()" id="special-charecter8" value="*">*
+                <p id="eight">8</p>
+            </button>
+            <button class="buttonsize" onclick="nine()" id="special-charecter9" value="(">(
+                <p id="nine">9</p>
+            </button>
+            <button class="buttonsize" onclick="zero()" id="special-charecter0" value=")">)
+                <p id="zero">0</p>
+            </button>
+            <button class="buttonsize" onclick="del()" id="special-charecter10">DEL
+            </button>
+        </div>
+        <div class="buttonrow2">
+            <button class="buttonsize" onclick="q()" id="q">Q</button>
+            <button class="buttonsize" onclick="w()" id="w">w</button>
+            <button class="buttonsize" onclick="e()" id="e">E</button>
+            <button class="buttonsize" onclick="r()" id="r">R</button>
+            <button class="buttonsize" onclick="t()" id="t">T</button>
+            <button class="buttonsize" onclick="y()" id="y">Y</button>
+            <button class="buttonsize" onclick="u()" id="u">U</button>
+            <button class="buttonsize" onclick="i()" id="i">I</button>
+            <button class="buttonsize" onclick="o()" id="o">O</button>
+            <button class="buttonsize" onclick="p()" id="p">P</button>
+        </div>
+        <div class="buttonrow3">
+            <button class="buttonsize" onclick="a()" id="a">A</button>
+            <button class="buttonsize" onclick="s()" id="s">S</button>
+            <button class="buttonsize" onclick="d()" id="d">D</button>
+            <button class="buttonsize" onclick="f()" id="f">F</button>
+            <button class="buttonsize" onclick="g()" id="g">G</button>
+            <button class="buttonsize" onclick="h()" id="h">H</button>
+            <button class="buttonsize" onclick="j()" id="j">J</button>
+            <button class="buttonsize" onclick="k()" id="k">K</button>
+            <button class="buttonsize" onclick="l()" id="l">L</button>
+        </div>
+        <div class="buttonrow4">
+            <button class="buttonsize" onclick="z()" id="z">Z</button>
+            <button class="buttonsize" onclick="x()" id="x">X</button>
+            <button class="buttonsize" onclick="c()" id="c">C</button>
+            <button class="buttonsize" onclick="v()" id="v">V</button>
+            <button class="buttonsize" onclick="b()" id="b">B</button>
+            <button class="buttonsize" onclick="n()" id="n">N</button>
+            <button class="buttonsize" onclick="m()" id="m">M</button>
+            <button class="buttonsize" onclick="com()" id="com">.COM</button>
+        </div>
+        <div>
+            <button class="spacebar" onclick="spacebar()" id="spacebar"></button>
+        </div>
+        <div class="bottomrow">
+            <button class="buttonsize" onclick="caps_lock()" id="caps">Caps</button>
+            <button class="buttonsize" onclick="Shift_btn()" id="shift">Shift</button>
+            <button class="buttonsize" onclick="pass()" id="pass">Pass</button>
+            <button class="buttonsize" onclick="rev()" id="rev">Rev</button>
+            <button class="buttonsize" onclick="clean()" id="clean">clean</button>
+        </div>
+    </div>
+</body>
+<script>
+    var output="";
+    var result="";
+    var shift=true;
+    var caps=true;
+    var passw=true;
+    function Shift_btn(){
+        if(shift==false){
+        shift=true;
+        document.getElementById("shift").style.backgroundColor="black"
+        }
+        else if(shift==true){
+        shift=false;
+        document.getElementById("shift").style.backgroundColor="red"
+        }
+    }
+    function one(){
+        if(shift==false){
+        var one=document.getElementById("one").innerHTML="!"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(shift==true){
+        var onee=document.getElementById("one").innerHTML="1"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+        }
+    }
+    function two(){
+        if(shift==false){
+        var two=document.getElementById("two").innerHTML="@"
+        output=two
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var two=document.getElementById("two").innerHTML="2"
+        output=two
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function three(){
+        if(shift==false){
+        var three=document.getElementById("three").innerHTML="#"
+        output=three
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var three=document.getElementById("three").innerHTML="3"
+        output=three
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function four(){
+        if(shift==false){
+        var four=document.getElementById("four").innerHTML="$"
+        output=four
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var four=document.getElementById("four").innerHTML="4"
+        output=four
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function five(){
+        if(shift==false){
+        var five=document.getElementById("five").innerHTML="%"
+        output=five
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var five=document.getElementById("five").innerHTML="5"
+        output=five
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function six(){
+        if(shift==false){
+        var six=document.getElementById("six").innerHTML="^"
+        output=six
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var six=document.getElementById("six").innerHTML="6"
+        output=six
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function seven(){
+        if(shift==false){
+        var seven=document.getElementById("seven").innerHTML="&"
+        output=seven
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var seven=document.getElementById("seven").innerHTML="7"
+        output=seven
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function eight(){
+        if(shift==false){
+        var eight=document.getElementById("eight").innerHTML="*"
+        output=eight
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var eight=document.getElementById("eight").innerHTML="8"
+        output=eight
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function nine(){
+        if(shift==false){
+        var nine=document.getElementById("nine").innerHTML="("
+        output=nine
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var nine=document.getElementById("nine").innerHTML="9"
+        output=nine
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function zero(){
+        if(shift==false){
+        var zero=document.getElementById("zero").innerHTML=")"
+        output=zero
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(shift==true){
+        var zero=document.getElementById("zero").innerHTML="0"
+        output=zero
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function caps_lock(){
+        if(caps==false){
+        caps=true;
+        document.getElementById("caps").style.backgroundColor="black"
+        }
+        else if(caps==true){
+        caps=false;
+        document.getElementById("caps").style.backgroundColor="red"
+        }
+    }
+    function q(){
+        if(caps==false){
+        var one=document.getElementById("q").innerHTML="Q"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("q").innerHTML="q"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function w(){
+        if(caps==false){
+        var one=document.getElementById("w").innerHTML="W"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("w").innerHTML="w"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function e(){
+        if(caps==false){
+        var one=document.getElementById("e").innerHTML="E"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("e").innerHTML="e"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function r(){
+        if(caps==false){
+        var one=document.getElementById("r").innerHTML="R"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("r").innerHTML="r"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function t(){
+        if(caps==false){
+        var one=document.getElementById("t").innerHTML="T"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("t").innerHTML="t"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function y(){
+        if(caps==false){
+        var one=document.getElementById("y").innerHTML="Y"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("y").innerHTML="y"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function u(){
+        if(caps==false){
+        var one=document.getElementById("u").innerHTML="U"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("u").innerHTML="u"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function i(){
+        if(caps==false){
+        var one=document.getElementById("i").innerHTML="I"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("i").innerHTML="i"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function o(){
+        if(caps==false){
+        var one=document.getElementById("o").innerHTML="O"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("o").innerHTML="o"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function p(){
+        if(caps==false){
+        var one=document.getElementById("p").innerHTML="P"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("p").innerHTML="p"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function a(){
+        if(caps==false){
+        var one=document.getElementById("a").innerHTML="A"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("a").innerHTML="a"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function s(){
+        if(caps==false){
+        var one=document.getElementById("s").innerHTML="S"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("s").innerHTML="s"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function d(){
+        if(caps==false){
+        var one=document.getElementById("d").innerHTML="D"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("d").innerHTML="d"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function f(){
+        if(caps==false){
+        var one=document.getElementById("f").innerHTML="F"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("f").innerHTML="f"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function g(){
+        if(caps==false){
+        var one=document.getElementById("g").innerHTML="G"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("g").innerHTML="g"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function h(){
+        if(caps==false){
+        var one=document.getElementById("h").innerHTML="H"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("h").innerHTML="h"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function j(){
+        if(caps==false){
+        var one=document.getElementById("j").innerHTML="J"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("j").innerHTML="j"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function k(){
+        if(caps==false){
+        var one=document.getElementById("k").innerHTML="K"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("k").innerHTML="k"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function l(){
+        if(caps==false){
+        var one=document.getElementById("l").innerHTML="L"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("l").innerHTML="l"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function z(){
+        if(caps==false){
+        var one=document.getElementById("z").innerHTML="Z"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("z").innerHTML="z"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function x(){
+        if(caps==false){
+        var one=document.getElementById("x").innerHTML="X"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("x").innerHTML="x"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function c(){
+        if(caps==false){
+        var one=document.getElementById("c").innerHTML="C"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("c").innerHTML="c"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function v(){
+        if(caps==false){
+        var one=document.getElementById("v").innerHTML="V"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("v").innerHTML="v"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }function b(){
+        if(caps==false){
+        var one=document.getElementById("b").innerHTML="B"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("b").innerHTML="b"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function n(){
+        if(caps==false){
+        var one=document.getElementById("n").innerHTML="N"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("n").innerHTML="n"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    }
+    function m(){
+        if(caps==false){
+        var one=document.getElementById("m").innerHTML="M"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("m").innerHTML="m"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else if(pass==false){
+        var one=document.getElementById("m").innerHTML="*"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+    }
+    function com(){
+        if(caps==false){
+        var one=document.getElementById("com").innerHTML=".COM"
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result  
+        }
+        else if(caps==true){
+        var onee=document.getElementById("com").innerHTML=".com"
+        output=onee
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result
+        }
+        else{
+
+        }
+    } 
+    function spacebar(){
+        var one=document.getElementById("spacebar").innerHTML=" "
+        output=one
+        result=(result+output)
+        document.getElementById("inputbox").innerHTML=result 
+    }
+    function pass(){
+        if(passw==false){
+        passw=true;
+        shift=false
+        caps=false
+        document.getElementById("pass").style.backgroundColor="black"
+
+        }
+        else if(passw==true){
+        passw=false;
+        shift=true;
+        caps=true;
+        document.getElementById("pass").style.backgroundColor="red"
+        
+        }
+    }
+    function rev(){        
+        var rev="";
+        var string =document.getElementById("inputbox").textContent
+        for(var i=string.length-1;i>=0;i--){
+            rev+=string[i];
+        }
+        document.getElementById("inputbox").innerHTML=rev
+    }
+    function clean(){
+        document.getElementById("inputbox").textContent=document.getElementById("inputbox").innerHTML=""
+    }
+    function del(){        
+        var string =document.getElementById("inputbox").textContent
+        string=string.substring(0,string.length -1);
+        document.getElementById("inputbox").innerHTML=string
+    }
+  
+</script>
+</html>

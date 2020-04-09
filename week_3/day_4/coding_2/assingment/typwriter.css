@@ -1,0 +1,63 @@
+.inputbox{
+    border: 3px solid tomato;
+    border-radius: 10px;
+    width: 840px;
+    height: 50px;
+    margin-left: 270px;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
+.buttonsize{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 2px solid brown;
+    border-radius: 15px;
+}
+.buttonrow1{
+    display: grid;
+    grid-template-columns: 26px 26px 26px 26px 26px 26px 26px 26px 26px 26px 26px;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 30px;
+}
+.buttonrow2{
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 30px;
+}
+.buttonrow3{
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 30px;
+    margin-left: 70px;
+}
+.buttonrow4{
+    display: grid;
+    grid-template-columns: 25px 25px 25px 25px 25px 25px 25px 25px 25px 25px;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 30px;
+    margin-left: 135px;
+}
+.spacebar{
+    width: 500px;
+    height: 50px;
+    background-color: black;
+    border: 2px solid brown;
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 430px;
+}
+.bottomrow{
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    margin-top: 25px;
+    margin-left: 450px;
+    
+}
