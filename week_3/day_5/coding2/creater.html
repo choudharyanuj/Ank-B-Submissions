@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcom</h1>
+    <button onclick="myworld()">creat h1 tag</button>
+</body>
+<script>
+    function myworld(){
+        var fisrt=document.createElement('h1');
+        fisrt.textContent = 'my world';
+
+       var bodyElem = document.querySelector('body');
+        bodyElem.appendChild(fisrt);
+    }
+</script>
+</html>

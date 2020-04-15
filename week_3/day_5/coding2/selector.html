@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>hi</h1>
+        <h1>hello</h1>
+        <h1>hey</h1>
+    </div>
+    <button onclick="changeh1()">change H1</button>
+    <h3>hi</h3>
+    <h3>hello</h3>
+    <h3>hey</h3>
+    <button onclick="changeall()">change all h3</button>
+    <h1>hey</h1>
+    <h5>name</h5>
+    <h5>f.name</h5>
+    <h2>hii</h2>
+    <button onclick="changeh5()">change all</button>
+    <div>
+        <p class="green">name</p>
+        <p class="green">name</p>
+        <p class="green">name</p>
+        <p class="black">name</p>
+    </div>
+    <button onclick="greenclass()">change all green class</button>
+    <div>
+        <p class="blue">name</p>
+        <p class="black">name</p>
+        <p class="blue">name</p>
+        <p class="black">name</p>
+    </div>
+    <button onclick="blueclass()">change all blue class</button>
+    <div>
+        <p class="red">name</p>
+        <p class="black">name</p>
+        <p class="black">name</p>
+        <p class="red">name</p>
+    </div>
+    <button onclick="redclass()">change all red class</button>
+</body>
+<script>
+    function changeh1(){
+        var firsth1=document.querySelector('h1');
+        firsth1.style.color = 'red';
+    }
+    function changeall(){
+        var allh3=document.querySelectorAll('h3');
+        for (i = 0; i < allh3.length; i++){
+        var hey = allh3[i];
+        hey.style.color = 'green';
+        }
+    }
+    function changeh5(){
+        var h5=document.querySelectorAll('h5');
+        for (i = 0; i <h5.length; i++){
+        var allh5 = h5[i];
+        allh5.style.color = 'blue';
+        }
+    }
+    function greenclass(){
+        var allclass=document.querySelectorAll('.green');
+        for (i = 0; i <allclass.length; i++){
+        var allgreen = allclass[i];
+        allgreen.style.color = 'green';
+        }
+    }
+    function blueclass(){
+        var allclass=document.querySelectorAll('.blue');
+        for (i = 0; i <allclass.length; i++){
+        var allgreen = allclass[i];
+        allgreen.style.color = 'blue';
+        }
+    }
+    function redclass(){
+        var allclass=document.querySelectorAll('.red');
+        for (i = 0; i <allclass.length; i++){
+        var allgreen = allclass[i];
+        allgreen.style.color = 'red';
+        }
+    }
+</script>
+</html>

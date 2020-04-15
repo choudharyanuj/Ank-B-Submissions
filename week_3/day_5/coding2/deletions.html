@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">First DIV</div>
+    <div id="div2">Second DIV</div>
+    <div id="cont">
+      <p class="para">First Para</p>
+      <p class="para">Second Para</p>
+      <p class="para">Third Para</p>
+      <p class="para">Fourth Para</p>
+    </div>
+    <button onclick="removeDiv()">Remove DIV</button>
+</body>
+    <script>
+        function removeDiv() {
+  var bodyElem = document.querySelector('body');
+  var firstDiv = document.getElementById("div1");
+  var div = document.querySelector('#div2');
+  bodyElem.removeChild(firstDiv);  
+  bodyElem.removeChild(div);  
+}
+</script>
+</html>
