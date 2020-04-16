@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="unix.css">
+</head>
+<body>
+    <button onclick="page()">click here for open full page</button>
+</body>
+    <script>
+        function page(){
+            var bgyellow = document.querySelector('body');
+            var firstpart=document.createElement('div');
+            firstpart.setAttribute('class','background1');
+            bgyellow.appendChild(firstpart);
+            console.log(firstpart)
+
+                var bgorange = document.querySelector('div')
+                var firstpartinside=document.createElement('div');
+                firstpartinside.setAttribute('class','background2')
+                bgorange.appendChild(firstpartinside)
+
+                    var image = document.querySelector('.background2')
+                    var linuximg = document.createElement('img');
+                    linuximg.setAttribute('id','linuximg')
+                    linuximg.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg/220px-LinuxCon_Europe_Linus_Torvalds_03_%28cropped%29.jpg')
+                    image.appendChild(linuximg)
+
+                    var name =document.querySelector('.background2');
+                    var linuxname = document.createElement('h1');
+                    linuxname.textContent = 'Linus Torvalds';
+                    linuxname.setAttribute('id','linuxname')
+                    name.appendChild(linuxname)
+
+                    var details =document.querySelector('.background2');
+                    var linuxdetails = document.createElement('h1');
+                    linuxdetails.textContent = 'The cretor of Linux & Git';
+                    linuxdetails.setAttribute('id','linuxdetails')
+                    name.appendChild(linuxdetails)
+
+            var bgcoral = document.querySelector('body');
+            var secondpart=document.createElement('div');
+            secondpart.setAttribute('class','background3');
+            bgcoral.appendChild(secondpart);
+
+                var image = document.querySelector('.background3')
+                var salimg = document.createElement('img');
+                salimg.setAttribute('id','salimg')
+                salimg.setAttribute('src','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Salman_Khan_TED_2011.jpg/220px-Salman_Khan_TED_2011.jpg')
+                image.appendChild(salimg)
+
+                var name1 =document.querySelector('.background3');
+                var salname = document.createElement('h1');
+                salname.textContent = 'SAL KHAN';
+                salname.setAttribute('id','salname')
+                name1.appendChild(salname)
+
+                var detail1 =document.querySelector('.background3');
+                var saldetail = document.createElement('h4');
+                saldetail.textContent = 'Sal khan is the founder of the khan Academy Which had a mission of providing a free world-class education for anyone, anywhere';
+                saldetail.setAttribute('id','saldetail')
+                detail1.appendChild(saldetail)
+
+            var bgoranged = document.querySelector('body');
+            var thirdpart=document.createElement('div');
+            thirdpart.setAttribute('class','background4');
+            bgoranged.appendChild(thirdpart);
+
+                var name2 =document.querySelector('body');
+                var lastname = document.createElement('h5');
+                lastname.setAttribute('id','text')
+                lastname.textContent = 'The Creator of C Programming Language';
+                name2.appendChild(lastname);
+
+                var name2 =document.querySelector('body');
+                var lastname = document.createElement('h3');
+                lastname.setAttribute('id','text')
+                lastname.textContent = 'Denis Ritchie';
+                name2.appendChild(lastname);
+
+                var name2 =document.querySelector('body');
+                var lastname = document.createElement('h3');
+                lastname.setAttribute('id','text1')
+                lastname.textContent = 'Denis Ritchie';
+                name2.appendChild(lastname);
+
+                var name2 =document.querySelector('body');
+                var lastname = document.createElement('h5');
+                lastname.setAttribute('id','text2')
+                lastname.textContent = 'The Creator of C Programming Language';
+                name2.appendChild(lastname);
+            
+        }
+    </script>
+</html>

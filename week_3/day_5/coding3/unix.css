@@ -1,0 +1,61 @@
+.background1{
+    background-color: yellow;
+    width: auto;
+    height: 450px;
+}
+#linuximg{
+    margin-left: 90px;
+}
+#linuxname{
+    margin-left: 95px;
+    color: blue;
+}
+#linuxdetails{
+    margin-left: 20px;
+}
+.background2{
+    background-color: orangered;
+    width: 400px;
+    height: 450px;
+    margin-left: 450px;
+    margin-top:px;
+}
+.background3{
+    background-color: coral;
+    width: auto;
+    height: 300px;
+    margin-top: 1px;
+}
+#salimg{
+    margin-top: 15px;
+}
+#salname{
+    color: white;
+    margin-left: 250px;
+    margin-top: -100px;
+}
+#saldetail{
+    color: white;
+    margin-left: 250px;
+}
+.background4{
+    background-color: orangered;
+    width: auto;
+    height: 150px;
+    margin-top: 1px; 
+}
+#text{
+    color: white;
+    margin-top: -70px;
+    margin-left: 20px;
+}
+#text1{
+    color: white;
+    margin-top: -30px;
+    margin-left: 1000px;
+}
+#text2{
+    color: white;
+    margin-top: -10px;
+    margin-left: 1000px;
+}
