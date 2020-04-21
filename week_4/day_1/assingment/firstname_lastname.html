@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="firstname_lastname.css">
+</head>
+<body>
+    <div class="container">
+        <div class="maincontainer">
+            <div class="inputbox">
+                <h3>min:</h3>
+                <h3 id="mini">0</h3>
+                <h3>max:</h3>
+                <p id="max">0</p>
+            </div>
+            <div class="displaybox">
+                <p id="display"></p>
+            </div>
+            <div class="buttongrid">
+                <button onclick="num(1)" >1</button>
+                <button onclick="num(2)" >2</button>
+                <button onclick="num(3)" >3</button>
+                <button onclick="num(4)" >4</button>
+                <button onclick="num(5)" >5</button>
+                <button onclick="num(6)" >6</button>
+                <button onclick="num(7)" >7</button>
+                <button onclick="num(8)" >8</button>
+                <button onclick="num(9)" >9</button>
+                <button>*</button>
+                <button onclick="num(0)" >0</button>
+                <button>#</button>
+            </div>
+            <div class="enterbutton">
+                <button onclick="button()" id="button">Enter</button>
+            </div>
+        </div>
+        <div>
+            <div class="maincontainer2">
+                <div class="para" id="mylist">
+                </div>
+                <div class="totalflex">
+                    <h1>Total:</h1>
+                    <div class="totaldivbg" id="total"></div>
+                </div>
+                <div class="totalflex">
+                    <button class="buttonsize" onclick="rall()">R-All</button>
+                    <button class="buttonsize" onclick="rodd()">R-Odd</button>
+                    <button class="buttonsize" onclick="reven()">R-Even</button>
+                    <button class="buttonsize" onclick="rlast()">R-Last</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var display = "";
+    var result=""
+    var sum = 0;
+function num(input){
+    display = input
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function button(){
+    var e = document.getElementById("max").textContent
+    var d = document.getElementById("display").textContent
+    var f = "Game-"
+    
+    var bgorange = document.querySelector('.para')
+    var firstpartinside=document.createElement('div');
+    firstpartinside.setAttribute('id','game')
+    firstpartinside.textContent = f+d;
+    bgorange.appendChild(firstpartinside)
+    
+
+    // document.getElementById("para").innerHTML=f
+    if (Number(e)<Number(d)) {
+        document.getElementById("max").innerHTML = d
+        result = "";
+        document.getElementById("mini").innerHTML = e
+        result = "";
+	}
+	else{
+        document.getElementById("mini").innerHTML = d;
+        result = "";
+    }
+    sum = sum+ Number(d);
+    console.log(sum)
+    document.getElementById('total').innerHTML = sum;
+
+}
+function rall(){
+    document.getElementById("mini").innerHTML=Number(0);
+    document.getElementById("max").innerHTML=Number(0);
+    document.getElementById("display").innerHTML=Number(0);
+    document.getElementById("total").innerHTML=Number(0);
+
+    var list = document.getElementById("mylist");
+    while (list.hasChildNodes()) {
+    list.removeChild(list.firstChild);
+  }
+}
+function rlast(){
+    var list = document.getElementById("mylist");
+  if (list.hasChildNodes()) {
+    list.removeChild(list.childNodes[0]);
+    list.removeChild(list.childNodes[2]);
+    list.removeChild(list.childNodes[4]);
+  }
+}
+
+</script>
+</html>
