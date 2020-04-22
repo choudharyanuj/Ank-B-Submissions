@@ -58,6 +58,7 @@
     var display = "";
     var result=""
     var sum = 0;
+    var count = 1;
 function num(input){
     display = input
     result= (result+display)
@@ -71,7 +72,7 @@ function button(){
     var bgorange = document.querySelector('.para')
     var firstpartinside=document.createElement('div');
     firstpartinside.setAttribute('id','game')
-    firstpartinside.textContent = f+d;
+    firstpartinside.textContent = f+count+'-'+d;
     bgorange.appendChild(firstpartinside)
     
 
@@ -86,6 +87,7 @@ function button(){
         document.getElementById("mini").innerHTML = d;
         result = "";
     }
+    count++;
     sum = sum+ Number(d);
     console.log(sum)
     document.getElementById('total').innerHTML = sum;
@@ -102,14 +104,31 @@ function rall(){
     list.removeChild(list.firstChild);
   }
 }
-function rlast(){
-    var list = document.getElementById("mylist");
-  if (list.hasChildNodes()) {
-    list.removeChild(list.childNodes[0]);
-    list.removeChild(list.childNodes[2]);
-    list.removeChild(list.childNodes[4]);
-  }
+function rodd() {
+    var removeodd = document.querySelectorAll("#game");
+    var gameodd = document.getElementById("mylist");
+    for (i = 1; i <= removeodd.length; i++) {
+        if ((i % 2) == 1) {
+        gameodd.removeChild(removeodd[i - 1]);
+        }
+    }
 }
 
+function reven() {
+    var removeeven = document.querySelectorAll("#game");
+    var gameeven = document.getElementById("mylist");
+    for (i = 1; i <= removeeven.length; i++) {
+        if ((i % 2) == 0) {
+        gameeven.removeChild(removeeven[i - 1]);
+        }
+    }
+}
+
+function rlast(){
+var removelast = document.querySelectorAll("#game");
+var gamelast = document.getElementById("mylist");
+last = removelast.length
+gamelast.removeChild(removelast[last - 1]);
+}
 </script>
 </html>
