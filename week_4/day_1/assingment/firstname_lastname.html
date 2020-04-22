@@ -56,27 +56,26 @@
 </body>
 <script>
     var display = "";
-    var result=""
-    var sum = 0;
+    var result="";
     var count = 1;
+    var ank = [];
+    var f = "Game-"
+    var new_arr = []
 function num(input){
     display = input
     result= (result+display)
     document.getElementById("display").innerHTML=result
 }
 function button(){
-    var e = document.getElementById("max").textContent
+    var sum = 0;
     var d = document.getElementById("display").textContent
-    var f = "Game-"
-    
+    var sl_no = 0
+    var e = document.getElementById("max").textContent
     var bgorange = document.querySelector('.para')
     var firstpartinside=document.createElement('div');
     firstpartinside.setAttribute('id','game')
-    firstpartinside.textContent = f+count+'-'+d;
     bgorange.appendChild(firstpartinside)
     
-
-    // document.getElementById("para").innerHTML=f
     if (Number(e)<Number(d)) {
         document.getElementById("max").innerHTML = d
         result = "";
@@ -88,11 +87,15 @@ function button(){
         result = "";
     }
     count++;
-    sum = sum+ Number(d);
-    console.log(sum)
+    ank.push(Number(d));
+    for(var i=0;i<ank.length;i++){
+        sum = sum + ank[i]
+        sl_no = sl_no+1
+    }
     document.getElementById('total').innerHTML = sum;
-
+    firstpartinside.textContent = f+sl_no + " - " + d;
 }
+
 function rall(){
     document.getElementById("mini").innerHTML=Number(0);
     document.getElementById("max").innerHTML=Number(0);
@@ -105,30 +108,83 @@ function rall(){
   }
 }
 function rodd() {
-    var removeodd = document.querySelectorAll("#game");
-    var gameodd = document.getElementById("mylist");
-    for (i = 1; i <= removeodd.length; i++) {
-        if ((i % 2) == 1) {
-        gameodd.removeChild(removeodd[i - 1]);
+
+    var new_sl_no = 0
+    var gameeven = document.getElementById("mylist");
+    var new_para = document.createElement('p');
+    var removeeven = document.querySelectorAll('#game')
+    var remove_odd = 0;
+
+    for(var i = 1; i < ank.length; i++){
+        if ( (i%2)!== 0){
+            new_arr.push(ank[i])
         }
     }
-}
+
+    for (i =0; i <= removeeven.length-1; i++) {
+        gameeven.removeChild(removeeven[i]);
+    }
+    
+    var secondcreat = document.querySelector('.para')
+
+    for(var i = 0; i < new_arr.length; i++){
+        remove_odd = remove_odd + Number(new_arr[i])
+        document.getElementById('total').innerHTML = remove_odd;
+        console.log(remove_odd)
+        new_sl_no = i+1 
+        var second = document.createElement('div');
+        second.setAttribute('id','game')
+        second.textContent = f + new_sl_no + "-" + new_arr[i]
+        secondcreat.appendChild(second)
+    }
+}  
 
 function reven() {
-    var removeeven = document.querySelectorAll("#game");
+    var new_sl_no = 0
     var gameeven = document.getElementById("mylist");
-    for (i = 1; i <= removeeven.length; i++) {
-        if ((i % 2) == 0) {
-        gameeven.removeChild(removeeven[i - 1]);
+    var new_para = document.createElement('p');
+    var removeeven = document.querySelectorAll('#game')
+    var remove_even = 0;
+
+    for(var i = 1; i < ank.length; i++){
+        if ( (i%2)== 0){
+            new_arr.push(ank[i])
         }
+    }
+
+    for (i =0; i <= removeeven.length-1; i++) {
+        gameeven.removeChild(removeeven[i]);
+    }
+    
+    var secondcreat = document.querySelector('.para')
+
+    for(var i = 0; i < new_arr.length; i++){
+        remove_even = remove_even + Number(new_arr[i])
+        document.getElementById('total').innerHTML = remove_even;
+        console.log(remove_even)
+        new_sl_no = i+1 
+        var second = document.createElement('div');
+        second.setAttribute('id','game')
+        second.textContent = f + new_sl_no + "-" + new_arr[i]
+        secondcreat.appendChild(second)
     }
 }
 
 function rlast(){
-var removelast = document.querySelectorAll("#game");
-var gamelast = document.getElementById("mylist");
-last = removelast.length
-gamelast.removeChild(removelast[last - 1]);
+    var last=0;
+    var last_t=0;
+    var removelast = document.querySelectorAll("#game");
+    var gamelast = document.getElementById("mylist");
+    last = removelast.length
+    gamelast.removeChild(removelast[last - 1]);
+
+    ank.pop(Number(ank.length-1));
+    for(var i=0; i<ank.length; i++){
+        last_t = last_t + Number(ank[i])
+        console.log(ank)
+    }
+
+    document.getElementById('total').innerHTML = last_t;
 }
 </script>
 </html>
