@@ -66,9 +66,6 @@
                     sume = sume +Number(store_input[i])
                     document.getElementById("even_position").innerHTML=sume
                 }
-                else{   
-
-                }
             }
         }
         function oddposition(){
@@ -77,9 +74,6 @@
                 if((i%2)!==0){
                     sume = sume +Number(store_input[i])
                     document.getElementById("odd_position").innerHTML=sume
-                }
-                else{   
-
                 }
             }
         }
@@ -90,9 +84,6 @@
                     sum = sum +Number(store_input[i])
                     document.getElementById("even_sum").innerHTML=sum
                 }
-                else{   
-                    
-                }
             }
         }
         function oddsum(){
@@ -101,9 +92,6 @@
                 if((store_input[i]%2)!==0){
                     sum = sum +Number(store_input[i])
                     document.getElementById("odd_sum").innerHTML=sum
-                }
-                else{   
-                    
                 }
             }
         }
@@ -114,16 +102,13 @@
                     sum = sum +Number(store_input[i])
                     document.getElementById("singal_sum").innerHTML=sum
                 }
-                else{   
-                    
-                }
             }
         }
 
         function doublesum(){
             var sum = 0;
             for(var i=0; i < store_input.length; i++){
-                if(Number(store_input[i])>=10){
+                if(Number(store_input[i])>=10 && Number(store_input[i]) <= 99){
                     sum = sum +Number(store_input[i])
                     console.log(sum)
                     document.getElementById("double_sum").innerHTML=sum
