@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries DataBase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <div>
+        <div class="country_heading">
+            <h1>Global Countries DataBase</h1>
+            <hr>
+        </div>
+        <div class="input_maindiv">
+            <div id="newcountry_heading">
+                <h1>Add a New Country Data</h1>
+                <hr>
+            </div>
+            <div>
+                <div>
+                    <h3>Name :</h3>
+                    <input type="text" id="name">
+                    <h3>Population :</h3>
+                    <input type="text" id="population">
+                    <h3>GDP</h3>
+                    <input type="text" id="gdp">
+                    <h3>Life Expectancy</h3>
+                    <input type="text" id="life_exp">
+                    <h3>Language</h3>
+                    <input type="text" id="language">
+                </div>
+                <button onclick="get_details()" class="submitbutton">Submit</button>
+                <hr>
+            </div>
+            <div class="fillterbutton">
+                <input type="checkbox" id="population_greater">
+                <label for="population greater than">population greater than</label>
+                <input type="checkbox" id="population_lesser">
+                <label for="population lesser then">population lesser than</label>
+                <input type="checkbox" id="lyfExp_equal">
+                <label for="Life Expectancy Equal To">Life Expectancy Equal To</label>
+                <input type="checkbox"  id="gdp_greater">
+                <label for="GDP greater then">GDP greater than</label>
+                <input type="checkbox"  id="gdp_lesser">
+                <label for="GDP lesser then">GDP lesser than</label>
+                <input type="checkbox" id="lng_equal">
+                <label for="Language">Language</label>
+            </div>
+            <div class="filter_box">
+                <input type="text" id="filter_input" placeholder="you can filter here">
+                <button onclick="fillter()">filter</button>
+            </div>
+            <div class="table">
+                <table style="width: 98%;">
+                    <thead>
+                        <th>Name</th>
+                        <th>Population</th>
+                        <th>GDP</th>
+                        <th>Life Expectancy</th>
+                        <th>Language</th>
+                    </thead>
+                    <tbody class="table_inside">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </center>
+</body>
+    <script src="./script.js"></script>
+</html>
