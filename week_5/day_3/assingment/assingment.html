@@ -10,25 +10,30 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <img style="width: 1350px; height: 500px;" class="img-fluid" src="./asset/leavesden-london-march-2016-entrance-600w-401967673.webp" alt="">
-        <h1 class="display-3 ml-5">WELCOME TO HOGWARTS WORLD</h1>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+        <div class="container-fluid bg-dark p-3">
+            <h1 class="display-3 font-weight-bold text-center text-white">WELCOME TO HOGWARTS WORLD</h1>
+        </div>
     </div>
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-        <div class="empty box container border border-danger m-5 p-3 ml-5">
-            <div class="row ml-5">
-                <button id="charechter" class="ml-5">charechter</button>
-                <button id="student" class="ml-5">Student</button>
-                <input type="text" placeholder="search characther other's details" class="ml-5" id="search">
-                <button id="submit" class="ml-2">search</button>
-                <button id="staff" class="ml-5">Staff</button>
-                <button id="house" class="ml-5">House</button>
+        <div class="container-fluid bg-dark p-3">
+            <img style="width: 1350px; height: 500px;" class="img-fluid" src="./asset/full.jpg" alt="">
+            <h1 class="display-3 font-weight-bold text-center text-white">Learn to Magic Here</h1>
+        </div>
+    </div>
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 jumbotron empty box container border border-danger p-3">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex flex-row justify-content-around">
+                    <button id="charechter" class="btn-lg bg-dark text-white rounded-pill border-danger">charechter</button>
+                    <button id="student" class="btn-lg bg-dark text-white rounded-pill border-danger">Student</button>
+                    <button id="staff" class="btn-lg bg-dark text-white rounded-pill border-danger">Staff</button>
+                    <button id="house" class="btn-lg bg-dark text-white rounded-pill border-danger">House</button>
             </div>
             <hr>
             <div class="row justify-content-around mt-5">
                 <div class="d-flex flex-column">
                     <center>
-                        <img id="harry_potter">
+                        <img id="harry_potter" class="img-fluid" src="./asset/cover.jpg">
                         <h1 id="hp_n"></h1>
                         <h4 id="hp_a"></h4>
                         <p id="hp_d"></p>
@@ -39,7 +44,7 @@
                 </div>
                 <div class="d-flex flex-column">
                     <center>
-                        <img id="hermione_granger">
+                        <img id="hermione_granger" class="img-fluid" src="./asset/dragon.jpeg">
                         <h1 id="hg_n"></h1>
                         <h4 id="hg_a"></h4>
                         <p id="hg_d"></p>
@@ -50,7 +55,7 @@
                 </div>
                 <div class="d-flex flex-column">
                     <center>
-                        <img id="ron_weasley">
+                        <img id="ron_weasley" class="img-fluid" style="width: 500px; height: 850px;" src="./asset/train.jpeg">
                         <h1 id="rw_n"></h1>
                         <h4 id="rw_a"></h4>
                         <p id="rw_d"></p>
@@ -61,7 +66,7 @@
                 </div>
                 <div class="d-flex flex-column">
                     <center>
-                        <img id="draco_malfoy">
+                        <img id="draco_malfoy" class="img-fluid"  src="./asset/last.jpg">
                         <h1 id="dm_n"></h1>
                         <h4 id="dm_a"></h4>
                         <p id="dm_d"></p>
@@ -97,5 +102,5 @@
     </div>
 </body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="./test.js"></script>
+    <script src="./script.js"></script>
 </html>
