@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="col-fluid">
+        <div class="bg-dark">
+            <h1 class="text-center text-white font-weight-bold p-3">Register.Here</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="jumbotron border border-danger">
+                <form>
+                    <div class="form-group row">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">NAme:</label>
+                        <div class="col-sm-10">
+                          <input type="text" id="user_name" class="form-control form-control-lg" id="colFormLabelLg" placeholder="enter your full Name">
+                            <p id="live_name"></p>
+                        </div>
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg mt-3">Email:</label>
+                        <div class="col-sm-10 mt-3">
+                          <input type="text"  id="user_email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="enter ur email">
+                        </div>
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg mt-3">mobile:</label>
+                        <div class="col-sm-10 mt-3">
+                          <input type="number"  id="user_mob" class="form-control form-control-lg" id="colFormLabelLg" placeholder="enter your mobile no">
+                            <p id="live_mob"></p>
+                        </div>
+                    </div>
+                </form>
+                <center>
+                    <button type="submit" id="get_detail" class="btn btn-lg btn-secondary">submit</button>
+                    <h4 id="popup" class="mt-5 font-weight-bold text-danger"></h4>
+                </center>
+            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+            <div class="jumbotron border border-info bg-dark">
+                <div class="d-flex flex-column">
+                    <div class="d-flex flex-row justify-content-center text-white">
+                        <h4>Name:</h4>
+                        <h4 id="blackbox_name"></h4>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center text-white">
+                        <h4>Email:</h4>
+                        <h4 id="blackbox_email"></h4>
+                    </div>
+                    <div class="d-flex flex-row justify-content-center text-white">
+                        <h4>mobile:</h4>
+                        <h4 id="blackbox_mob"></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('input').focus(function() {
+            $(this).css('border', "4px solid red")
+        });
+
+        $('#user_name').keyup(function() {
+            var value = $(this).val();
+            $("#blackbox_name").text(value)
+            if (value.length > 3) {
+                $("#live_name").text("only " + (10-value.length) + " characters remaining");
+                $(this).css('border', "2px solid green")
+            } else {
+                $("live_name").text("")
+            }
+        });
+
+        $('#user_email').keyup(function() {
+            var value = $(this).val();
+            $("#blackbox_email").text(value)
+            if (value[value.length-1]=="m" && value[value.length-2]=="o" && value[value.length-3]=="c") {
+                $(this).css('border', "2px solid green")
+            } else {
+                $("live_name").text("")
+            }
+        });
+
+        $('#user_mob').keyup(function() {
+            var value = $(this).val();
+            $("#blackbox_mob").text(value)
+            if (value.length >= 10) {
+                $("#live_mob").text("only " + (10-value.length) + " characters remaining");
+                $(this).css('border', "2px solid green")
+            } else {
+                $("live_name").text("")
+            }
+        });
+
+        $("#get_detail").click(function(){
+            var user_name = $("#user_name").val();
+            var user_email = $("#user_email").val();
+            var user_mob = $("#user_mob").val();
+            console.log(user_name, user_mob, user_email)
+
+            if(user_name.length>3 || user_name.length<10){
+                $("#blackbox_name").text(user_name);
+                $("#user_name").val("");
+            }
+            else{
+                alert("plz enter 3 to 10 word name")
+            }
+            
+            if(user_mob.length==10){
+                $("#blackbox_mob").text(user_mob);
+                $("#user_mob").val("");
+            }
+            else{
+                alert("you are fill incorrect mob no")
+            }
+
+            $("#blackbox_email").text(user_email);
+            $("#user_email").val("");
+            
+            $("#popup").text("Congratulations, your form submitted successfully");
+        });
+    </script>
+</html>
