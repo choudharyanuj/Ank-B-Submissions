@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>colors</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="1st" class="red">i am first</h1>
+    <h2 id="2nd" class="green">i am second</h2>
+    <h3 id="3rd" class="red">i am third</h3>
+    <h4 id="4th" class="green">i am fourth</h4>
+    <div id="5th" class="red">i am div</div>
+    <p id="6th" class="green">i am para</p>
+    <button id="demo1">change H1</button>
+    <button id="demo2">change H2</button>
+    <button id="demo3">change H3</button>
+    <button id="demo4">change H4</button>
+    <button id="demo5">change div</button>
+    <button id="demo6">change para</button>
+    <button id="demo7">change red</button>
+    <button id="demo8">change green</button>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#demo1').click(function(){
+            $('#1st').css("font-size", "70px")
+        });
+        $('#demo2').click(function(){
+            $('#2nd').css({"font-size": "40px" , "padding": "10px"})
+        })
+        $('#demo3').click(function(){
+            $('#3rd').css({"background": "black" , "color" : "white"})
+        })
+        $('#demo4').click(function(){
+            $('#4th').css({"border": "2px solid black" , "margin-top" : "10px","margin-bottom" :"10px"})
+        })
+        $('#demo5').click(function(){
+            $('#5th').css({"padding-top" : "15px","padding-bottom" :"6px","padding-left" : "8px","padding-right" :"8px"})
+        })
+        $('#demo6').click(function(){
+            $('#6th').css({"color" : "purple", "font-weight": "bold"})
+        })
+        $('#demo7').click(function(){
+            $('.red').css({"color" : "red"})
+        })
+        $('#demo8').click(function(){
+            $('.green').css({"background" : "green"})
+        })
+    </script>
+</html>
