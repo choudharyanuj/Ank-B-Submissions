@@ -1,0 +1,249 @@
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: slateblue;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  font-size: 18px;
+  float: right;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+/* first_section */
+
+.section_1_bg{
+  width: auto;
+  height: 500px;
+  background-color: springgreen;
+  padding-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.section_1_bg > .card_Q{
+  background-color: slateblue;
+  width: 500px;
+  height: 400px;
+  margin: 25px;
+  padding-bottom: 20px;
+  
+}
+.card_Q:hover{
+  background-color: white;
+}
+
+.inputbox_button{
+  background-color: rosybrown;
+  margin-left: 150px;
+  border: solid red 1px;
+}
+.button_div{
+  margin-top: 20px;
+  margin-left: 50px;
+}
+.inputbox_button:focus{
+  background-color: white;
+}
+
+.section_1_bg > .card_A{
+  background-color: slateblue;
+  width: 500px;
+  height: 400px;
+  margin: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+  
+}
+.circal{
+  width: 200px;
+  height: 200px;
+  border: solid black 5px;
+  border-radius: 50%;
+  margin-left: 150px;
+  background-image: linear-gradient(red 50%, green 50%);
+}
+/* footers */
+.f_bg {
+  height: 73px;
+  width: 100%;
+  background-color: slateblue;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+.f_bg >.home > p {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  color: #efefef;
+}
+.f_bg>.middle> button{
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 50px;
+  padding: 13px 10px 13px 10px;
+  background-color: slateblue;
+  border:solid red 1px;
+  border-radius: 20px;
+  color: white
+}
+.f_bg>.middle> button:hover{
+  background-color: violet;
+}
+.f_bg >.last > p {
+  margin-left: 35px;
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  color: #efefef;
+}
+@media (max-width:800px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: red;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 30px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: slateblue;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 25%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: 250px;
+  }
+
+  .section_1_bg{
+    width: auto;
+    height: auto;
+    background-color: springgreen;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .section_1_bg > .card_Q{
+    background-color: slateblue;
+    width: auto;
+    height: auto;
+    margin: 25px;
+    padding-bottom: 20px;
+    
+  }
+  .inputbox_button{
+    background-color: rosybrown;
+    margin-left: 70px;
+    border: solid red 1px;
+  }
+  .section_1_bg > .card_A{
+    background-color: slateblue;
+    width: auto;
+    height: auto;
+    margin: 25px;
+    padding-bottom: 20px;
+    text-align: center;
+    
+  }
+  .circal{
+    width: 200px;
+    height: 200px;
+    border: solid black 5px;
+    border-radius: 50%;
+    margin-left: 50px;
+    background-image: linear-gradient(red 50%, green 50%);
+  }
+  .f_bg {
+    height: auto;
+    width: auto;
+    background-color: slateblue;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+  .f_bg >.home{
+    text-align: center;
+  }
+  .f_bg >.home > p {
+    display: inline-block;
+    color: #efefef;
+  }
+  .f_bg>.middle{
+    align-items: center;
+  }
+  .f_bg>.middle > button{
+    background-color: slateblue;
+    border:solid red 1px;
+    border-radius: 20px;
+    color: white
+  }
+  .f_bg>.middle> button:hover{
+    background-color: violet;
+  }
+  .f_bg >.last {
+    align-items: center;
+  }
+  .f_bg >.last > p {
+    display: inline-block;
+    color: #efefef;
+  }
+}
