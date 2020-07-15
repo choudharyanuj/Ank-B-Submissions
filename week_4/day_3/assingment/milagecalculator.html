@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milage Calculator</title>
+    <style>
+    label{
+        display: block;
+    }
+    .maindiv{
+        margin-left: 300px;
+        margin-top: 50px;
+    }
+    #heading{
+       
+        margin-left: 400px;
+    }
+    .flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-left: 50px;
+        margin-top: -220px;
+    }
+    .tripgo{
+        margin-left: 380px;
+        margin-top: -30px;
+    }
+    #history{
+        margin-left: 380px;
+    }
+    #historydetails{
+        margin-top: 10px;
+        margin-left: 380px;
+    }
+    #ptag{
+        padding-top: 2px;
+        white-space: pre-line;
+    }
+    .unit{
+        display: flex;
+        flex-direction: row;
+    }
+    </style>
+</head>
+<body>
+    <div id="heading">
+        <h1>This milage meter is work on 2okm per ltr</h1>
+    </div>
+    <div class="maindiv">
+        <div class="firstdiv">
+            <label for = "Date">Date</label>
+            <input type="date" name = "name" class = "personInput" />
+
+            <label for = "FuelFilled">FuelFilled</label>
+            <input type="text" name = "name" class = "personInput" id="fueldetail"/>
+        
+            <label for = "TripDistanceDetails">TripDistanceDetails</label>
+            <input type="text" name = "Age" class = "personInput" id="traveldetail"/>
+        
+            <label for = "submit">Submit Information:</label>
+            <button name = "submit" id = 'submitBtn'>Submit</button>
+
+            <label for = "GetAllDetails">GetAllDetails</label>
+            <button name = "GetDetails" id = 'displayBtn'>GetDetails</button>
+        
+        </div>
+       
+        <div class="seconddiv">
+            <div class="flex">
+                <div>
+                    <h1>Total Fuel</h1>
+                    <div class="unit">
+                        <p id="totalfuel">0</p>
+                        <p>ltr</p>
+                    </div>
+                </div>
+                <div>
+                    <h1>Total Travelled Distance</h1>
+                    <div class="unit">
+                        <p id="totaldistance">0</p>
+                        <p>km</p>
+                    </div>
+                </div>
+            </div>
+            <div class="tripgo">
+                <div>
+                    <h1>Go for Trip</h1>
+                    <div class="unit">
+                        <p id="gotrip">0</p>
+                        <p>km</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1 id="history">fuel History</h1>
+                <div class="newpara" id="historydetails">  
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+    <script>
+        function fueldetails(Date, FuelFilled, TripDistanceDetails){
+            this.Date = Date;
+            this. FuelFilled = FuelFilled;
+            this.TripDistanceDetails = TripDistanceDetails;
+            this.getDetails = function(){
+                var output = ''
+                for(key in this){
+                output = output + key + ":"+"-"+" " + this[key] + "\n"
+                if(key == 'TripDistanceDetails') break;
+                }
+                return output
+            }
+        }
+        var inputcustomer_details = [];
+        function createperson(){
+            var inputs = document.querySelectorAll('.personInput')
+            var newPerson = new fueldetails();
+            
+            var i = 0 
+            for(key in newPerson){
+                if(newPerson[key] == undefined){
+                if(key != 'TripDistanceDetails')  {
+                    newPerson[key] = inputs[i].value 
+                }
+                else {
+                    newPerson[key] = inputs[i].value.split(',')
+                }
+                inputs[i].value = ''
+                i++
+                }
+            }
+            inputcustomer_details.push(newPerson)
+
+            var beforefuel = document.getElementById("totalfuel").textContent
+            var beforetotaldis = document.getElementById("totaldistance").textContent
+            var gofortrip = document.getElementById("gotrip").textContent
+
+
+            var inputfuel = Number(newPerson.FuelFilled)
+            var inputtraveldistance = Number(newPerson.TripDistanceDetails)
+            
+
+            var sumfuel = Number(beforefuel) + Number(inputfuel)
+            var sumdistance =  Number(beforetotaldis) + Number(inputtraveldistance)
+        
+            document.getElementById("totalfuel").innerHTML = sumfuel 
+            document.getElementById("totaldistance").innerHTML = sumdistance 
+            document.getElementById("gotrip").innerHTML = ((sumfuel*20)-inputtraveldistance)
+
+            
+        }
+        function displayAll(){
+        var displayContainer = document.querySelector('.newpara') 
+        displayContainer.innerHTML = ''
+            for(var i = 0; i < inputcustomer_details.length;i++){
+                var displayPara = document.createElement('p')
+                displayPara.setAttribute('id','ptag')
+                displayPara.textContent = inputcustomer_details[i].getDetails() 
+                displayContainer.appendChild(displayPara) 
+            }
+        }
+
+        var submitBtn = document.querySelector('#submitBtn')
+        submitBtn.addEventListener('click', createperson) 
+
+        var displayBtn = document.querySelector('#displayBtn')
+        displayBtn.addEventListener('click',displayAll)
+    </script>
+</html>

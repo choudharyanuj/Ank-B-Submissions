@@ -1,0 +1,71 @@
+
+.maincontainer{
+    background-color: teal;
+    width: 600px;
+    height: 600px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 150px;
+}
+.inputbox{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding-top: 50px;
+}
+.displaybox{
+    width: 150px;
+    height: 150px;
+    background-color: gray;
+    margin-left: 220px;
+    margin-top: 50px;
+    justify-content: center;
+}
+.buttongrid{
+    display: grid;
+    grid-template-columns:  15% 15% 15%;
+    grid-template-rows: 50% 50% 50% 50%;
+    grid-gap: 10%;
+    justify-content: center;
+    margin-top: 30px;
+}
+.enterbutton{
+   
+    margin-top: 120px;
+    margin-left: 255px;
+}
+#button{
+    width: 90px;
+    height: 50px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* 2nd part */
+.maincontainer2{
+    background-color: green;
+    width: 300px;
+    height: 600px;
+    color: white;
+    margin-top: 30px;
+}
+.totalflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.totaldivbg{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: white;
+    margin-top: 15px;
+}
+.buttonsize{
+    height: 50px;
+    width: 50px;
+    background-color: tomato;
+}

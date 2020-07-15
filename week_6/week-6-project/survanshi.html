@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  bg-dark">
+        <a class="navbar-brand text-white" href="./home.html">BooKMyTicket</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="#">Movies</a>
+                </li>
+            </ul>
+            <div>
+                <a href="./bookticket.html"><button class="btn btn-outline-success mr-5" type="submit">Book Ticket</button></a>
+                <button class="btn btn-outline-success" type="submit">SignIn</button>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotrone">
+        <h6 class="display-4">Book suryavanshi Ticket</h6>
+        <div>
+            <p class="display-4">cinepolish cinama</p>
+            <button type="button" id="9to12" class="btn btn-outline-success" data-toggle="modal" data-target="#show-1st">9:oo A.m to 12:00 P.m</button>
+            <button class="btn btn-outline-success" id="12to3"data-toggle="modal" data-target="#show-2nd">12:oo A.m to 3:00 P.m</button>
+            <button class="btn btn-outline-success" id="3to6"data-toggle="modal" data-target="#show-3rd">3:oo p.m to 6:00 P.m</button>
+            <button class="btn btn-outline-success" id="6to9"data-toggle="modal" data-target="#show-4th">6:oo p.m to 9:00 P.m</button>
+            <button class="btn btn-outline-success" id="9to1"data-toggle="modal" data-target="#show-5th">9:oo p.m to 12:00 A.m</button>
+        </div>
+        <div>
+            <p class="display-4">Fun cinama</p>
+            <button class="btn btn-outline-success" id="9to12" data-toggle="modal" data-target="#notbooking">9:oo A.m to 12:00 P.m</button>
+            <button class="btn btn-outline-success" id="12to3" data-toggle="modal" data-target="#notbooking">12:oo p.m to 03:00 P.m</button>
+            <button class="btn btn-outline-success" id="3to6" data-toggle="modal" data-target="#notbooking">3:oo p.m to 6:00 P.m</button>
+            <button class="btn btn-outline-success" id="6to9" data-toggle="modal" data-target="#notbooking">6:oo p.m to 9:00 P.m</button>
+            <button class="btn btn-outline-success" id="9to1" data-toggle="modal" data-target="#notbooking">9:oo p.m to 12:00 a.m</button>
+        </div>
+        <div>
+            <p class="display-4">Ashok cinama</p>
+            <button class="btn btn-outline-success" id="9to12" data-toggle="modal" data-target="#notbooking">9:oo A.m to 12:00 P.m</button>
+            <button class="btn btn-outline-success" id="12to3" data-toggle="modal" data-target="#notbooking">12:oo p.m to 03:00 P.m</button>
+            <button class="btn btn-outline-success" id="3to6" data-toggle="modal" data-target="#notbooking">3:oo p.m to 6:00 P.m</button>
+            <button class="btn btn-outline-success" id="6to9" data-toggle="modal" data-target="#notbooking">6:oo p.m to 9:00 P.m</button>
+            <button class="btn btn-outline-success" id="9to1" data-toggle="modal" data-target="#notbooking">9:oo p.m to 12:00 a.m</button>
+        </div>
+    </div>
+    <!-- modal coding -->
+    <!-- 1st modal -->
+    <div>
+        <div class="modal fade" id="show-1st" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Ticket price: 350rupess</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-row">
+                            <button type="button" class="btn btn-success" id="S1A1">A1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A2">A2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A3">A3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A4">A4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A5">A5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A6">A6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A7">A7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A8">A8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1A9">A9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S1B1">B1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B2">B2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B3">B3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B4">B4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B5">B5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B6">B6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B7">B7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B8">B8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1B9">B9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S1C1">C1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C2">C2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C3">C3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C4">C4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C5">C5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C6">C6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C7">C7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C8">C8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S1C9">C9</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div style="width: 40px; height: 40px;" class="bg-success"></div>
+                        <p>:Unbooked</p>
+                        <div style="width: 40px; height: 40px;" class="bg-danger"></div>
+                        <p>:Booked</p>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="./ticketform.html"><button type="button" class="btn btn-primary">Next</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 2nd modal -->
+    <div>
+        <div class="modal fade" id="show-2nd" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Ticket price: 350rupess</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-row">
+                            <button type="button" class="btn btn-success" id="S2A1">A1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A2">A2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A3">A3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A4">A4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A5">A5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A6">A6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A7">A7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A8">A8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2A9">A9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S2B1">B1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B2">B2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B3">B3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B4">B4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B5">B5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B6">B6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B7">B7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B8">B8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2B9">B9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S2C1">C1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C2">C2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C3">C3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C4">C4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C5">C5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C6">C6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C7">C7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C8">C8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S2C9">C9</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div style="width: 40px; height: 40px;" class="bg-success"></div>
+                        <p>:Unbooked</p>
+                        <div style="width: 40px; height: 40px;" class="bg-danger"></div>
+                        <p>:Booked</p>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="./ticketform.html"><button type="button" class="btn btn-primary">Next</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 3rd modal -->
+    <div>
+        <div class="modal fade" id="show-3rd" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Ticket price: 350rupess</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-row">
+                            <button type="button" class="btn btn-success" id="S3A1">A1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A2">A2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A3">A3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A4">A4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A5">A5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A6">A6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A7">A7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A8">A8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3A9">A9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S3B1">B1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B2">B2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B3">B3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B4">B4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B5">B5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B6">B6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B7">B7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B8">B8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3B9">B9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S3C1">C1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C2">C2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C3">C3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C4">C4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C5">C5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C6">C6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C7">C7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C8">C8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S3C9">C9</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div style="width: 40px; height: 40px;" class="bg-success"></div>
+                        <p>:Unbooked</p>
+                        <div style="width: 40px; height: 40px;" class="bg-danger"></div>
+                        <p>:Booked</p>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="./ticketform.html"><button type="button" class="btn btn-primary">Next</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 4th modal -->
+    <div>
+        <div class="modal fade" id="show-4th" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Ticket price: 350rupess</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-row">
+                            <button type="button" class="btn btn-success" id="S4A1">A1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A2">A2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A3">A3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A4">A4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A5">A5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A6">A6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A7">A7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A8">A8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4A9">A9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S4B1">B1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B2">B2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B3">B3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B4">B4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B5">B5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B6">B6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B7">B7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B8">B8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4B9">B9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S4C1">C1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C2">C2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C3">C3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C4">C4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C5">C5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C6">C6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C7">C7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C8">C8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S4C9">C9</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div style="width: 40px; height: 40px;" class="bg-success"></div>
+                        <p>:Unbooked</p>
+                        <div style="width: 40px; height: 40px;" class="bg-danger"></div>
+                        <p>:Booked</p>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="./ticketform.html"><button type="button" class="btn btn-primary">Next</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 5th modal -->
+    <div>
+        <div class="modal fade" id="show-5th" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalScrollableTitle">Ticket price: 350rupess</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body d-flex flex-column justify-content-between">
+                        <div class="d-flex flex-row">
+                            <button type="button" class="btn btn-success" id="S5A1">A1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A2">A2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A3">A3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A4">A4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A5">A5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A6">A6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A7">A7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A8">A8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5A9">A9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S5B1">B1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B2">B2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B3">B3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B4">B4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B5">B5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B6">B6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B7">B7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B8">B8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5B9">B9</button>
+                        </div>
+                        <div class="d-flex flex-row mt-5">
+                            <button type="button" class="btn btn-success" id="S5C1">C1</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C2">C2</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C3">C3</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C4">C4</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C5">C5</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C6">C6</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C7">C7</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C8">C8</button>
+                            <button type="button" class="btn btn-success ml-2" id="S5C9">C9</button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div style="width: 40px; height: 40px;" class="bg-success"></div>
+                        <p>:Unbooked</p>
+                        <div style="width: 40px; height: 40px;" class="bg-danger"></div>
+                        <p>:Booked</p>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <a href="./ticketform.html"><button type="button" class="btn btn-primary">Next</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="modal fade" id="notbooking" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalScrollableTitle">Ticket price: 350rupess</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Currently we are not Bokking Ticket</div>
+                        <div class="modal-footer">
+                            <div style="width: 40px; height: 40px;" class="bg-success"></div>
+                            <p>:Unbooked</p>
+                            <div style="width: 40px; height: 40px;" class="bg-danger"></div>
+                            <p>:Booked</p>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <div class="mt-1 pt-5">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 bg-dark">
+            <center>
+                <div class="d-flex flex-row justify-content-center pt-5">
+                    <img style="width: 25px; height: 25px;" class="rounded-pill" src="./asset/fb.png" alt="fb-logo">
+                    <img style="width: 25px; height: 25px;" class="rounded-pill ml-2" src="./asset/insta.png" alt="insta-logo">
+                    <img style="width: 25px; height: 25px;" class="rounded-pill ml-2" src="./asset/twiteer.png" alt="twitter-logo">
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-3 text-white">
+                  <p>Home</p>
+                  <p class="ml-5">Hindi Movie</p>
+                  <p class="ml-5">English Movie</p>
+                  <P class="ml-5">south Movie</P>
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-2 text-white">
+                    <h4>BooKMyTicket</h4>
+                </div>
+                <div class="d-flex flex-row justify-content-center mt-2 text-white">
+                    <p>© 1990-2020 by BooKMyTicket.com, Inc.</p>
+                </div>
+            </center>
+        </div>
+    </div>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./movie.js"></script>
+</html>

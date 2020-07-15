@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container border border-danger m-5 p-3">
+        <h1 id="1st">i am first h1</h1>
+        <h3>i am h3</h3>
+        <h3>i am h3</h3>
+        <h5>hello h5</h5>
+        <h5>hellooooo!!!</h5>
+        <h5>hii h5</h5>
+        <h5>hey h5</h5>
+    </div>
+    <div class="empty box container border border-danger m-5 p-3">
+        <div class="red bg-danger">1</div>
+        <div>2</div>
+        <div class="red bg-danger">3</div>
+        <div>4</div>
+        <div class="red bg-danger">5</div>
+        <div>6</div>
+      </div>
+    <button id="removeh1">remove h1</button>
+    <button id="removeh3">remove two h3</button>
+    <button id="removeh5">remove all h5</button>
+    <button id="removeRed">removeRed</button>
+    <button id="alldiv">Remove count Div</button>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $( "#removeh1" ).click(function() {
+            $("#1st").remove();
+        });
+
+        $( "#removeh3" ).click(function() {
+            $("h3").remove();
+        });
+
+        $( "#removeh5" ).click(function() {
+            $("h5").remove();
+        });
+
+        $( "#removeRed" ).click(function() {
+            $(".red").remove();
+        });
+        $( "#alldiv" ).click(function() {
+            $(".empty").remove();
+        });
+    </script>
+</html>

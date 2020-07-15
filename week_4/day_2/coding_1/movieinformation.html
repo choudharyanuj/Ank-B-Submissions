@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="firstdiv">
+            <button onclick="information()" class="button">Movie Information</button>
+        </div>
+    </div>
+</body>
+    <script>
+        var movie = {
+            Name:"Inception",
+            Director: "Christopher Nolan",
+            year: 2010,
+            Rating: 8.8,
+            Cast: ["Leonardo DiCaprio","Joseph Gordon-Levitt","Ellen Page"],
+        }
+        function information(){
+            var select_button = document.querySelector('.firstdiv')
+            var creat_movie_inf=document.createElement('p');
+            creat_movie_inf.textContent = "Name"+":"+" "+movie.Name
+            creat_movie_inf.setAttribute('class','para')
+            select_button.appendChild(creat_movie_inf)
+
+            var creat_movie_inf=document.createElement('p');
+            creat_movie_inf.textContent = "Director"+":"+" "+movie.Director
+            creat_movie_inf.setAttribute('class','para')
+            select_button.appendChild(creat_movie_inf)
+
+            var creat_movie_inf=document.createElement('p');
+            creat_movie_inf.textContent = "Year"+":"+" "+movie.year
+            creat_movie_inf.setAttribute('class','para')
+            select_button.appendChild(creat_movie_inf)
+
+            var creat_movie_inf=document.createElement('p');
+            creat_movie_inf.textContent = "Rating"+":"+" "+movie.Rating+" "+"IMDB"
+            creat_movie_inf.setAttribute('class','para')
+            select_button.appendChild(creat_movie_inf)
+
+            var creat_movie_inf=document.createElement('p');
+            creat_movie_inf.textContent = "Cast"+":"+" "+movie.Cast
+            creat_movie_inf.setAttribute('class','para')
+            select_button.appendChild(creat_movie_inf)
+
+            var creat_button=document.createElement('button');
+            creat_button.textContent = "Movie Runing Time"
+            creat_button.setAttribute('onclick','runingtime()')
+            creat_button.setAttribute('class','runtimebutton')
+            select_button.appendChild(creat_button)
+        }
+        function runingtime(){
+        movie.Runtime = "2h 28min"
+
+            var select_button = document.querySelector('.maindiv')
+            var creat_movie_inf=document.createElement('div');
+            creat_movie_inf.textContent = "movie Runing Time"+": "+movie.Runtime
+            creat_movie_inf.setAttribute('class','seconddiv')
+            select_button.appendChild(creat_movie_inf)
+
+            
+            var creat_htag=document.createElement('h3');
+            creat_htag.textContent = "Add your cast name:"
+            select_button.appendChild(creat_htag)
+
+            var creat_input = document.createElement('input')
+            var creat_input_button = document.createElement('button')
+            creat_input_button.textContent = "submit"
+            creat_input.setAttribute('id', 'input')
+            creat_input_button.setAttribute('onclick','submit()')
+            creat_input_button.setAttribute('id','submitbutton')
+            select_button.appendChild(creat_input)
+            select_button.appendChild(creat_input_button)
+        }
+        function submit(){
+            var user_input = document.getElementById("input").value
+            movie.Cast.push(user_input)
+            console.log(movie)
+        }
+    </script>
+</html>

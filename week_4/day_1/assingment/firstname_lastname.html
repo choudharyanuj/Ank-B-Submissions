@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="firstname_lastname.css">
+</head>
+<body>
+    <div class="container">
+        <div class="maincontainer">
+            <div class="inputbox">
+                <h3>min:</h3>
+                <h3 id="mini">0</h3>
+                <h3>max:</h3>
+                <p id="max">0</p>
+            </div>
+            <div class="displaybox">
+                <p id="display"></p>
+            </div>
+            <div class="buttongrid">
+                <button onclick="num(1)" >1</button>
+                <button onclick="num(2)" >2</button>
+                <button onclick="num(3)" >3</button>
+                <button onclick="num(4)" >4</button>
+                <button onclick="num(5)" >5</button>
+                <button onclick="num(6)" >6</button>
+                <button onclick="num(7)" >7</button>
+                <button onclick="num(8)" >8</button>
+                <button onclick="num(9)" >9</button>
+                <button>*</button>
+                <button onclick="num(0)" >0</button>
+                <button>#</button>
+            </div>
+            <div class="enterbutton">
+                <button onclick="button()" id="button">Enter</button>
+            </div>
+        </div>
+        <div>
+            <div class="maincontainer2">
+                <div class="para" id="mylist">
+                </div>
+                <div class="totalflex">
+                    <h1>Total:</h1>
+                    <div class="totaldivbg" id="total"></div>
+                </div>
+                <div class="totalflex">
+                    <button class="buttonsize" onclick="rall()">R-All</button>
+                    <button class="buttonsize" onclick="rodd()">R-Odd</button>
+                    <button class="buttonsize" onclick="reven()">R-Even</button>
+                    <button class="buttonsize" onclick="rlast()">R-Last</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var display = "";
+    var result="";
+    var count = 1;
+    var Input_Store = [];
+    var Output_Game = "Game-"
+    var new_arr = []
+function num(input){
+    display = input
+    result= (result+display)
+    document.getElementById("display").innerHTML=result
+}
+function button(){
+    var sum = 0;
+    var sl_no = 0
+    var Input_Display = document.getElementById("display").textContent
+    var Input_Max = document.getElementById("max").textContent
+    var bgorange = document.querySelector('.para')
+    var firstpartinside=document.createElement('div');
+    firstpartinside.setAttribute('id','game')
+    bgorange.appendChild(firstpartinside)
+    
+    if (Number(Input_Max)<Number(Input_Store)) {
+        document.getElementById("max").innerHTML = Input_Store
+        result = "";
+        document.getElementById("mini").innerHTML = Input_Max
+        result = "";
+	}
+	else{
+        document.getElementById("mini").innerHTML = Input_Display;
+        result = "";
+    }
+    Input_Store.push(Number(Input_Display));
+    for(var i=0;i<Input_Store.length;i++){
+        sum = sum + Input_Store[i]
+        sl_no = sl_no+1
+    }
+    document.getElementById('total').innerHTML = sum;
+    firstpartinside.textContent = Output_Game+sl_no + " - " + Input_Display;
+}
+
+function rall(){
+    document.getElementById("mini").innerHTML=Number(0);
+    document.getElementById("max").innerHTML=Number(0);
+    document.getElementById("display").innerHTML=Number(0);
+    document.getElementById("total").innerHTML=Number(0);
+
+    var list = document.getElementById("mylist");
+    while (list.hasChildNodes()) 
+    {
+    list.removeChild(list.firstChild);
+    }
+}
+function rodd() {
+
+    var new_sl_no = 0
+    var select_parent_div = document.getElementById("mylist");
+    var new_para = document.createElement('p');
+    var select_all_P = document.querySelectorAll('#game')
+    var remove_odd = 0;
+
+    for(var i = 1; i < Input_Store.length; i++){
+        if ( (i%2)!== 0){
+            new_arr.push(Input_Store[i])
+        }
+    }
+
+    for (i =0; i <= select_all_P.length-1; i++) {
+        select_parent_div.removeChild(select_all_P[i]);
+    }
+    
+    var secondcreat = document.querySelector('.para')
+
+    for(var i = 0; i < new_arr.length; i++){
+        remove_odd = remove_odd + Number(new_arr[i])
+        document.getElementById('total').innerHTML = remove_odd;
+        console.log(remove_odd)
+        new_sl_no = i+1 
+        var second = document.createElement('div');
+        second.setAttribute('id','game')
+        second.textContent = Output_Game + new_sl_no + "-" + new_arr[i]
+        secondcreat.appendChild(second)
+    }
+}  
+
+function reven() {
+    var new_sl_no = 0
+    var select_parent_div = document.getElementById("mylist");
+    var new_para = document.createElement('p');
+    var select_all_P = document.querySelectorAll('#game')
+    var remove_even = 0;
+
+    for(var i = 1; i < Input_Store.length; i++){
+        if ( (i%2)== 0){
+            new_arr.push(Input_Store[i])
+        }
+    }
+
+    for (i =0; i <= select_all_P.length-1; i++) {
+        select_parent_div.removeChild(select_all_P[i]);
+    }
+    
+    var secondcreat = document.querySelector('.para')
+
+    for(var i = 0; i < new_arr.length; i++){
+        remove_even = remove_even + Number(new_arr[i])
+        document.getElementById('total').innerHTML = remove_even;
+        console.log(remove_even)
+        new_sl_no = i+1 
+        var second = document.createElement('div');
+        second.setAttribute('id','game')
+        second.textContent = Output_Game + new_sl_no + "-" + new_arr[i]
+        secondcreat.appendChild(second)
+    }
+}
+
+function rlast(){
+    var last=0;
+    var last_t=0;
+    var remove_last_input = document.querySelectorAll("#game");
+    var select_parent_div = document.getElementById("mylist");
+    last = remove_last_input.length
+    select_parent_div.removeChild(remove_last_input[last - 1]);
+
+    Input_Store.pop(Number(Input_Store.length-1));
+    for(var i=0; i<Input_Store.length; i++){
+        last_t = last_t + Number(Input_Store[i])
+        console.log(Input_Store)
+    }
+
+    document.getElementById('total').innerHTML = last_t;
+}
+</script>
+</html>

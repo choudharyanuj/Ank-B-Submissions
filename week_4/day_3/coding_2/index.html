@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        label {
+        display:block; 
+        }
+        #ptag{
+            padding-top: 2px;
+            white-space: pre-line;
+        }
+        #newperson{
+            margin-left: 500px;
+            margin-top: -350px;
+        }
+    </style>
+</head>
+<body>
+    <div class="maindiv">
+        <div class="firstdiv">
+            <button onclick="customer_details()">click here for customer Details</button>
+            <div id="display_details"></div>
+        </div>
+        <div class="seconddiv">
+            <label for = "Firstname">Firstname</label>
+            <input type="text" name = "name" class = "personInput"/>
+        
+            <label for = "Lastname">Lastname</label>
+            <input type="text" name = "Age" class = "personInput"/>
+        
+            <label for = "DateOfBirth">DateOfBirth</label>
+            <input type="text" name = "height" class = "personInput"/>
+        
+            <label for = "Balance">Balance</label>
+            <input type="text" name = "gender" class = "personInput"/>
+        
+            <label for = "AccountNumber">AccountNumber</label>
+            <input type="text" name = "name" class = "personInput"/>
+
+            <label for = "SharedAccountHolders">SharedAccountHolders(Comma separated)</label>
+            <input type="text" name = "name" class = "personInput"/>
+        
+            <label for = "submit">Submit Information:</label>
+            <button name = "submit" id = 'submitBtn'>Submit</button>
+        
+            <label for = "displayPeople">Display All People</label>
+            <button name = "displayPeople" id = 'displayBtn'>Display All Poeple</button>
+        </div>
+        <div class="thirddiv" id="newperson">
+            <h1>New person Details</h1>
+            <div class="newpara"></div>
+        </div>
+    </div>
+</body>
+    <script>
+        var customer = {
+            Firstname:"Ankit",
+            Lastname:"choudhary",
+            DateOfBirth: "15/10/95",
+            Balance: 1000,
+            AccountNumber: 2456378949,
+            SharedAccountHolders:["father","mother"],
+            getDetails: function(){
+                var output = ''
+                for(key in this){
+                    output = output+ key + ":"+"-"+" " + customer[key] + "\n"
+                    if(key == "SharedAccountHolders") {
+                        break
+                    } 
+                }
+                return output
+            }
+
+        }
+
+        function customer_details(){
+            var select_div = document.querySelector('#display_details')
+            var get_details = customer.getDetails()
+
+            var outputPara = document.createElement('p')
+            outputPara.setAttribute('id', 'ptag')
+  
+            outputPara.textContent = get_details
+            select_div.innerHTML = '';
+            select_div.appendChild(outputPara)
+        }
+
+        function newcustomer_details(Firstname, Lastname, DateOfBirth, Balance, AccountNumber, SharedAccountHolders){
+            this.Firstname = Firstname;
+            this.Lastname = Lastname;
+            this.DateOfBirth = DateOfBirth;
+            this.Balance = Balance;
+            this.AccountNumber = AccountNumber;
+            this.SharedAccountHolders = SharedAccountHolders;
+            this.getDetails = function(){
+                var output = ''
+                for(key in this){
+                output = output + key + ":"+"-"+" " + this[key] + "\n"
+                if(key == 'SharedAccountHolders') break;
+                }
+                return output 
+            }
+        }
+        var inputcustomer_details = [];
+        function createperson(){
+            var inputs = document.querySelectorAll('.personInput')
+            var newPerson = new newcustomer_details();
+            
+            var i = 0 
+            for(key in newPerson){
+                if(newPerson[key] == undefined){
+                if(key != 'SharedAccountHolders')  {
+                    newPerson[key] = inputs[i].value 
+                }
+                else {
+                    newPerson[key] = inputs[i].value.split(',')
+                }
+                inputs[i].value = ''
+                i++
+                }
+            }
+            inputcustomer_details.push(newPerson)
+            console.log(inputcustomer_details)
+        }
+        function displayAll(){
+        var displayContainer = document.querySelector('.newpara') 
+        displayContainer.innerHTML = ''
+            for(var i = 0; i < inputcustomer_details.length;i++){
+                var displayPara = document.createElement('p')
+                displayPara.setAttribute('id','ptag')
+                displayPara.textContent = inputcustomer_details[i].getDetails() 
+                displayContainer.appendChild(displayPara) 
+            }
+        }
+
+        var submitBtn = document.querySelector('#submitBtn')
+        submitBtn.addEventListener('click', createperson) 
+
+        var displayBtn = document.querySelector('#displayBtn')
+        displayBtn.addEventListener('click',displayAll)
+    </script>
+</html>

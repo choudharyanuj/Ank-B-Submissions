@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .para{
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <input type="text" class="input" id="userinput">
+            <button onclick="submitbutton()">submit</button>
+        </div>
+        <div class="flex">
+            <button onclick="evenposition()">Even Positions Sum</button>
+            <p id="even_position" class="para">hey</p>
+        </div>
+        <div class="flex">
+            <button onclick="oddposition()">Odd Positions Sum</button>
+            <p id="odd_position" class="para">hey</p>
+        </div>
+        <div class="flex">
+            <button onclick="evensum()">Even Sum</button>
+            <p id="even_sum" class="para">hey</p>
+        </div>
+        <div class="flex">
+            <button onclick="oddsum()">Odd Sum</button>
+            <p id="odd_sum" class="para">hey</p>
+        </div>
+        <div class="flex">
+            <button onclick="singalsum()">Single Digit Sum</button>
+            <p id="singal_sum" class="para">hey</p>
+        </div>
+        <div class="flex">
+            <button onclick="doublesum()">Double Digit Sum</button>
+            <p id="double_sum" class="para">hey</p>
+        </div>
+    </div>
+</body>
+    <script>
+        var store_input = [];
+        
+        function submitbutton(){
+            var user_input = document.getElementById("userinput").value
+            var user_string = user_input.split(",")
+            for(var i =0; i<user_string.length; i++) {
+                store_input.push(user_string[i])
+            }
+            console.log(user_input[i])
+        }
+        function evenposition(){
+            var sume = 0;
+            for(var i=0; i < store_input.length; i++){
+                if((i%2)==0){
+                    sume = sume +Number(store_input[i])
+                    document.getElementById("even_position").innerHTML=sume
+                }
+            }
+        }
+        function oddposition(){
+            var sume = 0;
+            for(var i=0; i < store_input.length; i++){
+                if((i%2)!==0){
+                    sume = sume +Number(store_input[i])
+                    document.getElementById("odd_position").innerHTML=sume
+                }
+            }
+        }
+        function evensum(){
+            var sum = 0;
+            for(var i=0; i < store_input.length; i++){
+                if((store_input[i]%2)==0){
+                    sum = sum +Number(store_input[i])
+                    document.getElementById("even_sum").innerHTML=sum
+                }
+            }
+        }
+        function oddsum(){
+            var sum = 0;
+            for(var i=0; i < store_input.length; i++){
+                if((store_input[i]%2)!==0){
+                    sum = sum +Number(store_input[i])
+                    document.getElementById("odd_sum").innerHTML=sum
+                }
+            }
+        }
+        function singalsum(){
+            var sum = 0;
+            for(var i=0; i < store_input.length; i++){
+                if(Number(store_input[i]) <= 9){
+                    sum = sum +Number(store_input[i])
+                    document.getElementById("singal_sum").innerHTML=sum
+                }
+            }
+        }
+
+        function doublesum(){
+            var sum = 0;
+            for(var i=0; i < store_input.length; i++){
+                if(Number(store_input[i])>=10 && Number(store_input[i]) <= 99){
+                    sum = sum +Number(store_input[i])
+                    console.log(sum)
+                    document.getElementById("double_sum").innerHTML=sum
+                }
+            }
+        }
+            
+    </script>
+</html>

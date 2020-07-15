@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Click to see the JSON string </h1>
+    <button id = "jsonObj">click for convert</button>
+    <p id = "display"> </p>
+</body>
+    <script>
+        var erp_details = {
+            "Employees" : [
+                {
+                "userId":"ankc",
+                "jobTitleName":"Developer",
+                "firstName":"Ankit",
+                "lastName":"choudhary",
+                "preferredFullName":"Ankit Choudhary",
+                "employeeCode":"E-D1",
+                "region":"Town",
+                "phoneNumber":"0612-22274",
+                "emailAddress":"ac@gmail.com"
+                },
+                {
+                "userId":"anjc",
+                "jobTitleName":"Front-end Developer",
+                "firstName":"Anuj",
+                "lastName":"choudhary",
+                "preferredFullName":"Anuj choudhary",
+                "employeeCode":"E-FD1",
+                "region":"Town",
+                "phoneNumber":"0612-22321",
+                "emailAddress":"anj@gmail.com"
+                },
+            ],
+            "count": 2
+        }
+
+        function display(inputStr){
+            var displayPara = document.querySelector('#display')
+            displayPara.innerText = inputStr
+        }
+
+        function objListener(){
+            var output = JSON.stringify(erp_details)
+            display(output)
+        }
+
+        var jsonBtn = document.querySelector('#jsonObj')
+
+        jsonBtn.addEventListener('click', objListener)
+    </script>
+</html>
