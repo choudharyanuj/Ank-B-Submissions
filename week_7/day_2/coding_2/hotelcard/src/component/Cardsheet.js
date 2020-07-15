@@ -56,7 +56,7 @@ export default class Cardsheet extends Component {
     }
     render() {
         return (
-             <div class="card_bg ">
+            <div class="card_bg ">
                  <div class="main_btn">
                     <button class="btn" onClick={this.showall}>All Hotel's</button>
                     <button class="btn" onClick={this.onestar}>Hotel above 1*</button>
@@ -64,9 +64,9 @@ export default class Cardsheet extends Component {
                     <button class="btn" onClick={this.threestar}>Hotel above 3*</button>
                     <button class="btn" onClick={this.fourstar}>Hotel above 4*</button>
                  </div>
+            <div class="sequence">
                 {
                 
-                    <div class="sequence">
                     <>
                     {
                     HotelInformation.map((e) => {
@@ -91,7 +91,7 @@ export default class Cardsheet extends Component {
                                     </div>
                                 </div>
                                 <hr></hr>
-                                <div class="card_fotter">
+                                <div class="card_fotte">
                                     <h4 class="text">{e.mode}</h4>
                                 </div>
                             </div>
@@ -101,8 +101,8 @@ export default class Cardsheet extends Component {
                         
                     }
                     </>
-                    </div>
-                                }
+            }
+            </div>
             </div>
         )
     }
