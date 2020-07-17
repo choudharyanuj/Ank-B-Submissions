@@ -1,18 +1,12 @@
 import React, { Component } from 'react'
-import Demo from './Demo'
+import Todo from './component/Todo'
 
 export default class App extends Component {
   render() {
     return (
       <div>
-          <div>
-              <Demo/>
-          </div>
+        <Todo/>
       </div>
     )
   }
 }
-
-
-
-

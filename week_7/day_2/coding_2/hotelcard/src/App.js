@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
-import Demo from './Demo'
+import './App.css'
+import Cardsheet from './component/Cardsheet'
+
 
 export default class App extends Component {
-  render() {
-    return (
+  render (){
+    return(
       <div>
-          <div>
-              <Demo/>
-          </div>
+        <Cardsheet/>
       </div>
     )
   }
 }
-
-
-
-
