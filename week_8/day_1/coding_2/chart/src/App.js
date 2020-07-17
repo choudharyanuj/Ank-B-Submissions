@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import Demo from './Demo'
+import Linechart from './Linechart'
 
 export default class App extends Component {
   render() {
     return (
       <div>
           <div>
-              <Demo/>
+              <Linechart/>
           </div>
       </div>
     )
