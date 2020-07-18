@@ -1,0 +1,13 @@
+.option_size{
+    width: 500px;
+    height: 30px;
+}
+.input_box{
+    width: 200px;
+    height: 80px;
+}
+.div_box{
+    width: 200px;
+    height: 80px;
+    border: 1px solid black;
+}
