@@ -4,6 +4,7 @@ import Crousal from './Crousal'
 import ThirdSection from './ThirdSection'
 import Registration from './Registration'
 import Student from './Student'
+import Bottom_section from './Bottom_section'
 
 
 export default class App extends Component {
@@ -15,6 +16,7 @@ export default class App extends Component {
         <ThirdSection/>
         <Registration/>
         <Student/>
+        <Bottom_section/>
       </div>
     )
   }
